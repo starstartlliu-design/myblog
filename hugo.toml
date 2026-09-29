@@ -1,0 +1,24 @@
+baseURL = "http://localhost/"
+languageCode = "en-us"
+title = "Lu's Blog"
+theme = "hugo-coder"
+
+[pagination]
+pagerSize = 10
+
+[params]
+author = "Lu"
+description = "Lu's course blog"
+info = ["M2 VAR Student at Télécom SudParis"]
+colorScheme = "auto"
+hideColorSchemeToggle = false
+
+[[menu.main]]
+name = "Posts"
+weight = 1
+url = "posts/"
+
+[[menu.main]]
+name = "HCI"
+weight = 2
+url = "courses/hci/"
