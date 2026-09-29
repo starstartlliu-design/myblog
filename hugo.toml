@@ -1,4 +1,4 @@
-baseURL = "http://localhost/"
+baseURL = "https://starstartlliu-design.github.io/myblog/"
 languageCode = "en-us"
 title = "Lu's Blog"
 theme = "hugo-coder"

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Posts on Lu&#39;s Blog</title>
-		<link>http://localhost:1313/posts/</link>
+		<link>https://starstartlliu-design.github.io/myblog/posts/</link>
 		<description>Recent content in Posts on Lu&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://starstartlliu-design.github.io/myblog/posts/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>HCI Homework 1</title>
-				<link>http://localhost:1313/posts/hci-homework-1/</link>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-1/</link>
 				<pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/hci-homework-1/</guid>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-1/</guid>
 				<description>&lt;p&gt;# Lecture 1: Affordances&lt;/p&gt;&#xA;&lt;p&gt;## Good Affordance&lt;/p&gt;&#xA;&lt;p&gt;Image&lt;/p&gt;&#xA;&lt;p&gt;### Description&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;## Bad Affordance&lt;/p&gt;&#xA;&lt;p&gt;Image&lt;/p&gt;&#xA;&lt;p&gt;### Description&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;### Redesign&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;# Lecture 2: Gestalt Laws&lt;/p&gt;&#xA;&lt;p&gt;## Example 1&lt;/p&gt;&#xA;&lt;p&gt;Image&lt;/p&gt;&#xA;&lt;p&gt;### Problem&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;### Redesign&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;## Example 2&lt;/p&gt;&#xA;&lt;p&gt;Image&lt;/p&gt;&#xA;&lt;p&gt;### Problem&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;### Redesign&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;&#xA;&lt;p&gt;# Lecture 3: Dark Design Patterns&lt;/p&gt;&#xA;&lt;p&gt;## Example 1&lt;/p&gt;&#xA;&lt;p&gt;Image&lt;/p&gt;&#xA;&lt;p&gt;### Description&lt;/p&gt;&#xA;&lt;p&gt;To be completed.&lt;/p&gt;</description>
 			</item>
 	</channel>
