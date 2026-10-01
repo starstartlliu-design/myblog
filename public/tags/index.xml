@@ -10,6 +10,15 @@
 		
 		
 		
+			<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HCI</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/hci/</link>
+				<pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/hci/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

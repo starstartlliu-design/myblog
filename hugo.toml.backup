@@ -21,8 +21,4 @@ url = "posts/"
 [[menu.main]]
 name = "HCI"
 weight = 2
-url = "courses/hci/" 
-[markup] 
-  [markup.goldmark] 
-    [markup.goldmark.renderer] 
-      unsafe = true
+url = "courses/hci/"
