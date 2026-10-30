@@ -10,14 +10,35 @@
 		
 		
 		
-			<lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0200</lastBuildDate>
 		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Gesture Interaction</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/gesture-interaction/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/gesture-interaction/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>HCI</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/hci/</link>
-				<pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/hci/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Homework 2</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/homework-2/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/homework-2/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kinect</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/kinect/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/kinect/</guid>
 				<description></description>
 			</item>
 	</channel>

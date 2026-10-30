@@ -1,0 +1,4 @@
+.local-build/
+.local-preview/
+.hugo-cache/
+.hugo_build.lock

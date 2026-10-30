@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success · Lu&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Lu">
+<meta name="description" content="Depth sensing, full-body gesture interfaces, and why Kinect did not replace conventional controllers.">
+<meta name="keywords" content="">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success">
+	<meta name="twitter:description" content="Depth sensing, full-body gesture interfaces, and why Kinect did not replace conventional controllers.">
+
+<meta property="og:url" content="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-6/">
+	<meta property="og:site_name" content="Lu&#39;s Blog">
+	<meta property="og:title" content="The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success">
+	<meta property="og:description" content="Depth sensing, full-body gesture interfaces, and why Kinect did not replace conventional controllers.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-10-31T00:00:00+02:00">
+		<meta property="article:modified_time" content="2026-10-31T00:00:00+02:00">
+		<meta property="article:tag" content="HCI">
+		<meta property="article:tag" content="Kinect">
+		<meta property="article:tag" content="Gesture Interaction">
+
+
+
+
+<link rel="canonical" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-6/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/myblog/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/myblog/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/myblog/css/homework.min.f5308cd878e0b0cbeab0074707035f1405774f988320f41eada412b8735bb544.css" integrity="sha256-9TCM2HjgsMvqsAdHBwNfFAV3T5iDIPQeraQSuHNbtUQ=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://starstartlliu-design.github.io/myblog/">
+      Lu&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/courses/hci/">HCI</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/hci-homework-2/">HCI Homework 2</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-6/">
+              The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-10-31T00:00:00&#43;02:00">
+                October 31, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              13-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/myblog/categories/human-computer-interaction/">Human-Computer Interaction</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/myblog/tags/hci/">HCI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/kinect/">Kinect</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/gesture-interaction/">Gesture Interaction</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <h1 id="the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success">
+  The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success
+  <a class="heading-link" href="#the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><strong>HCI Homework 2 — Lecture 6</strong></p>
+<h2 id="1-introduction">
+  1. Introduction
+  <a class="heading-link" href="#1-introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In November 2010, Microsoft introduced Kinect for the Xbox 360, a motion-sensing device that allowed people to control games using their bodies instead of conventional handheld controllers.</p>
+<p>The concept was ambitious: users could become the controller themselves. By combining depth sensing, computer vision, and real-time human pose estimation, Kinect made full-body interaction available to millions of consumers.</p>
+<p>Initially, the product was extremely successful. According to Guinness World Records, Kinect sold approximately eight million units during its first 60 days, setting a record for the fastest-selling gaming peripheral at the time.</p>
+<p>Nevertheless, Kinect did not become the standard input device for console gaming. Microsoft removed it from the standard Xbox One bundle in 2014 and eventually discontinued the Xbox Kinect product line in 2017.</p>
+<p>This history raises an important HCI question:</p>
+<p><strong>Why did a technologically innovative and initially successful input device fail to establish itself as a mainstream replacement for traditional controllers?</strong></p>
+<p>I argue that Kinect&rsquo;s decline was not simply a failure of sensing technology. Instead, it illustrates the difference between making a new interaction technique technically possible and making it consistently useful, efficient, and desirable.</p>
+<h2 id="2-what-type-of-user-interface-is-kinect">
+  2. What Type of User Interface Is Kinect?
+  <a class="heading-link" href="#2-what-type-of-user-interface-is-kinect">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Kinect is commonly classified as a <strong>Natural User Interface (NUI)</strong>, more specifically a <strong>vision-based, full-body gesture interface</strong>.</p>
+<p>Unlike a keyboard or game controller, Kinect does not require users to manipulate a physical input device directly.</p>
+<p>Instead, it interprets human movement through cameras and depth-sensing hardware.</p>
+<p>Its interaction process can be summarized as:</p>
+<p><strong>Body movement → Depth sensing → Human pose estimation → Gesture recognition → Game command</strong></p>
+<p>Kinect also supports voice input through microphones, making it a multimodal interface in some applications.</p>
+<p>The term <em>natural</em> refers to the use of familiar human actions such as moving, jumping, reaching, and speaking.</p>
+<p>However, this terminology requires caution. A gesture may be physically familiar without being an efficient or comfortable method of controlling software.</p>
+<p>For example, repeatedly raising an arm to navigate menus may be less convenient than pressing a button.</p>
+<p>Therefore, Kinect offers an opportunity to distinguish <strong>natural movement</strong> from <strong>effective interaction design</strong>.</p>
+<h2 id="3-technical-principle-how-kinect-measures-three-dimensional-space">
+  3. Technical Principle: How Kinect Measures Three-Dimensional Space
+  <a class="heading-link" href="#3-technical-principle-how-kinect-measures-three-dimensional-space">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="31-first-generation-kinect-structured-light-depth-sensing">
+  3.1 First-Generation Kinect: Structured-Light Depth Sensing
+  <a class="heading-link" href="#31-first-generation-kinect-structured-light-depth-sensing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The original Kinect for Xbox 360 used a structured-light depth-sensing system.</p>
+<p>It included an infrared projector and an infrared camera, alongside an RGB camera.</p>
+<p>The infrared projector illuminated the scene with a predefined pattern. When this pattern fell on objects at different distances, its appearance in the camera image changed according to the geometry of the scene.</p>
+<p>The system could estimate depth by analyzing the observed pattern relative to its known reference geometry.</p>
+<p>A simplified triangulation model helps explain the physical principle.</p>
+<p>Suppose the infrared projector and camera are separated by a baseline \(B\). For a calibrated stereo-like geometry, the depth \(Z\) of a scene point can be related to image disparity \(d\) by</p>
+\[Z=\frac{fB}{d},\]<p>where \(f\) is the focal length expressed in pixel units.</p>
+<p>The equation shows that depth estimation depends on the relationship between viewing geometry and image displacement.</p>
+<p>However, this is a simplified triangulation expression, not the complete proprietary Kinect depth-reconstruction algorithm. Actual structured-light reconstruction also requires pattern correspondence, calibration, and correction for measurement errors.</p>
+<p>An important limitation follows from the geometry: when objects are farther away, changes in disparity become smaller, making accurate depth measurement more difficult.</p>
+<p>Other challenges include reflective surfaces, infrared interference, occlusion, and objects outside the sensor&rsquo;s usable range.</p>
+<h3 id="32-second-generation-kinect-time-of-flight-sensing">
+  3.2 Second-Generation Kinect: Time-of-Flight Sensing
+  <a class="heading-link" href="#32-second-generation-kinect-time-of-flight-sensing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The Xbox One generation of Kinect introduced a different depth-sensing approach based on time-of-flight (ToF) principles.</p>
+<p>In a simplified direct ToF system, depth can be estimated using</p>
+\[Z=\frac{c\Delta t}{2},\]<p>where \(c\) is the speed of light and \(\Delta t\) is the round-trip travel time.</p>
+<p>The factor of two appears because light travels from the sensor to the object and then returns.</p>
+<p>Many practical ToF cameras, including the Kinect v2 generation, use modulated illumination and phase-based measurements rather than directly timing individual light pulses.</p>
+<p>For an ideal single-frequency phase-measurement model,</p>
+\[Z=\frac{c\phi}{4\pi f_m},\]<p>where \(\phi\) is the measured phase shift and \(f_m\) is the modulation frequency.</p>
+<p>This relationship has an ambiguity because phase is measured modulo \(2\pi\). Practical systems must account for the unambiguous measurement range and other error sources.</p>
+<p>The transition from structured light to ToF illustrates that Kinect was not a single fixed sensing technology. Microsoft continued developing the underlying depth-sensing hardware even as the consumer gaming strategy evolved.</p>
+<h2 id="4-from-depth-images-to-human-skeletons">
+  4. From Depth Images to Human Skeletons
+  <a class="heading-link" href="#4-from-depth-images-to-human-skeletons">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Depth sensing is only the first step.</p>
+<p>A depth camera produces a depth map, but a game needs to understand whether a person is raising an arm, bending a knee, or jumping.</p>
+<p>This requires human pose estimation.</p>
+<h3 id="41-depth-map-representation">
+  4.1 Depth Map Representation
+  <a class="heading-link" href="#41-depth-map-representation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A depth image can be represented as</p>
+\[D(u,v)=Z,\]<p>where \((u,v)\) is a pixel location and \(Z\) is the estimated distance from the camera.</p>
+<p>With camera calibration parameters, depth pixels can be converted into three-dimensional points.</p>
+<p>For a pinhole camera model,</p>
+\[X=\frac{(u-c_x)Z}{f_x}, \qquad Y=\frac{(v-c_y)Z}{f_y},\]<p>where \(f_x,f_y\) are focal lengths in pixel units and \(c_x,c_y\) are the principal-point coordinates.</p>
+<p>These equations explain how a depth image can become a three-dimensional representation of the observed scene.</p>
+<p>However, knowing the location of surface points is not the same as knowing the positions of human joints.</p>
+<h3 id="42-human-body-part-classification">
+  4.2 Human Body-Part Classification
+  <a class="heading-link" href="#42-human-body-part-classification">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A particularly important contribution came from Microsoft Research.</p>
+<p>In the CVPR 2011 paper <em>Real-Time Human Pose Recognition in Parts from a Single Depth Image</em>, Shotton and colleagues proposed predicting human joint locations from individual depth images.</p>
+<p>Instead of trying to match an entire observed body to a complete stored pose, their approach first classified depth-image pixels into body-part categories.</p>
+<p>The researchers used randomized decision forests trained on a large and varied dataset of synthetic human depth images.</p>
+<p>The processing pipeline can be described as:</p>
+<ol>
+<li>
+<p>Acquire a depth image.</p>
+</li>
+<li>
+<p>Extract depth-dependent image features.</p>
+</li>
+<li>
+<p>Classify pixels into anatomical body-part categories.</p>
+</li>
+<li>
+<p>Reproject the classified pixels into three-dimensional space.</p>
+</li>
+<li>
+<p>Aggregate evidence to estimate the positions of body joints.</p>
+</li>
+</ol>
+<p>A key feature of the method is its use of depth comparisons at offset image locations.</p>
+<p>Conceptually, a feature can be written as</p>
+\[F_{\theta}(I,\mathbf{x})= d_I\left(\mathbf{x}+\frac{\mathbf{u}}{d_I(\mathbf{x})}\right) - d_I\left(\mathbf{x}+\frac{\mathbf{v}}{d_I(\mathbf{x})}\right),\]<p>where \(d_I(\mathbf{x})\) is the depth at pixel \(\mathbf{x}\), and \(\mathbf{u},\mathbf{v}\) define offset positions.</p>
+<p>Dividing the offsets by depth helps make the features more consistent across different distances from the camera.</p>
+<p>The decision forest uses such features to distinguish different body parts.</p>
+<p>The authors reported a highly efficient implementation capable of processing depth images at approximately 200 frames per second on consumer hardware in their research evaluation.</p>
+<p>This figure describes the research algorithm&rsquo;s computational performance, not the Kinect camera&rsquo;s actual image acquisition frame rate.</p>
+<h3 id="43-from-pose-estimation-to-game-commands">
+  4.3 From Pose Estimation to Game Commands
+  <a class="heading-link" href="#43-from-pose-estimation-to-game-commands">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Once the system estimates joint positions, an application can recognize higher-level actions.</p>
+<p>For example, a game might detect a jump by examining the vertical movement of the torso or lower-body joints over time.</p>
+<p>A gesture classifier may also consider movement direction, duration, velocity, and the relative positions of different joints.</p>
+<p>This introduces an important distinction:</p>
+<p><strong>Tracking the human body is not equivalent to understanding the user&rsquo;s intention.</strong></p>
+<p>A player may raise an arm to stretch, wave to another person, or perform a game command.</p>
+<p>The sensor can observe similar physical motion in all three cases, but the intended meaning is different.</p>
+<p>Therefore, gesture interfaces must address both recognition accuracy and the ambiguity of human behavior.</p>
+<h2 id="5-why-did-kinect-struggle-as-a-mainstream-game-controller">
+  5. Why Did Kinect Struggle as a Mainstream Game Controller?
+  <a class="heading-link" href="#5-why-did-kinect-struggle-as-a-mainstream-game-controller">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="51-limited-suitability-across-game-genres">
+  5.1 Limited Suitability Across Game Genres
+  <a class="heading-link" href="#51-limited-suitability-across-game-genres">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Kinect was particularly suitable for games where the activity itself involved large body movements.</p>
+<p>Dance, fitness, and certain sports games could map real-world actions directly onto virtual actions.</p>
+<p>However, many popular game genres require precise and frequent control inputs.</p>
+<p>For example, a complex action game may need simultaneous control of movement, camera orientation, aiming, weapon selection, and several context-dependent actions.</p>
+<p>A conventional controller provides many buttons, analog sticks, and triggers within a small physical space.</p>
+<p>A gesture-only interface has difficulty reproducing this input density without requiring complicated movements or gestures that users must memorize.</p>
+<p>This suggests that Kinect was highly suitable for some tasks but poorly suited to others.</p>
+<p>Its difficulty was not that full-body gestures were inherently ineffective, but that they were not a universal substitute for a game controller.</p>
+<h3 id="52-physical-fatigue-and-interaction-cost">
+  5.2 Physical Fatigue and Interaction Cost
+  <a class="heading-link" href="#52-physical-fatigue-and-interaction-cost">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A button press requires very little physical movement.</p>
+<p>A full-body gesture may require moving an arm, changing posture, or standing in front of the sensor.</p>
+<p>For short, physically engaging games, this can be enjoyable.</p>
+<p>For long gaming sessions or routine menu navigation, however, it may become tiring.</p>
+<p>This is related to the <em>gorilla arm</em> problem in HCI, where prolonged mid-air interaction causes muscular fatigue.</p>
+<p>The lesson is that interaction cost should be evaluated relative to the task.</p>
+<p>A natural gesture can be more physically demanding than an artificial but highly optimized button press.</p>
+<h3 id="53-lack-of-tactile-feedback-and-precision">
+  5.3 Lack of Tactile Feedback and Precision
+  <a class="heading-link" href="#53-lack-of-tactile-feedback-and-precision">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Traditional controllers provide physical buttons, mechanical travel, and often vibration feedback.</p>
+<p>These cues help users recognize successful actions without constantly checking the screen.</p>
+<p>Kinect removes much of this tactile information.</p>
+<p>For instance, when selecting an item through a mid-air gesture, the user may have no physical indication that the selection has been registered.</p>
+<p>The interface must compensate with visual or auditory feedback.</p>
+<p>This becomes especially problematic when the user needs precise timing or when gesture recognition is uncertain.</p>
+<p>Kinect&rsquo;s depth sensing also faces technical constraints such as occlusion, limited field of view, and uncertainty in joint localization.</p>
+<p>These constraints do not make the technology unusable, but they increase the burden on interface design.</p>
+<h3 id="54-environmental-and-accessibility-constraints">
+  5.4 Environmental and Accessibility Constraints
+  <a class="heading-link" href="#54-environmental-and-accessibility-constraints">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Kinect requires a suitable physical environment.</p>
+<p>Users need adequate space, appropriate sensor placement, and an unobstructed view of their bodies.</p>
+<p>A motion-controlled game may be difficult to use in a small room or in a shared living space.</p>
+<p>Full-body gesture interfaces can also create accessibility barriers for users with limited mobility or who cannot comfortably perform the required movements.</p>
+<p>A well-designed interface should provide alternatives rather than assume that all users can interact through the same physical actions.</p>
+<p>Thus, the absence of a handheld controller does not automatically make a system more accessible.</p>
+<h2 id="6-the-commercial-and-platform-factors">
+  6. The Commercial and Platform Factors
+  <a class="heading-link" href="#6-the-commercial-and-platform-factors">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="61-early-commercial-success">
+  6.1 Early Commercial Success
+  <a class="heading-link" href="#61-early-commercial-success">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Kinect&rsquo;s launch was a major commercial achievement.</p>
+<p>According to Guinness World Records, the Xbox 360 Kinect sold approximately eight million units in its first 60 days.</p>
+<p>This success indicates that consumers were interested in the idea of controller-free interaction.</p>
+<p>It also suggests that Kinect offered a compelling experience for particular audiences and applications.</p>
+<p>Therefore, describing Kinect as a product that was unsuccessful from the beginning would be historically inaccurate.</p>
+<h3 id="62-the-xbox-one-bundling-decision">
+  6.2 The Xbox One Bundling Decision
+  <a class="heading-link" href="#62-the-xbox-one-bundling-decision">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>When Microsoft launched Xbox One in 2013, Kinect was included in the standard package.</p>
+<p>The launch price in the United States was $499.</p>
+<p>In May 2014, Microsoft announced a new Xbox One package without Kinect for $399, which became available in June.</p>
+<p>This created a clear choice between a lower-priced console and a package containing the motion sensor.</p>
+<p>The price difference did not represent the manufacturing cost of Kinect alone, but it demonstrated how bundling influenced the perceived value of the console.</p>
+<p>Consumers who primarily wanted conventional games no longer had to purchase the motion sensor.</p>
+<h3 id="63-the-developer-ecosystem-problem">
+  6.3 The Developer Ecosystem Problem
+  <a class="heading-link" href="#63-the-developer-ecosystem-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Bundling also affects developers.</p>
+<p>If every console includes a sensor, developers can design games with the expectation that all users have access to it.</p>
+<p>Once the sensor becomes optional, this assumption no longer holds.</p>
+<p>Developers must decide whether supporting Kinect is worth the additional design, testing, and development effort.</p>
+<p>If relatively few users own or actively use the sensor, dedicated Kinect features become less attractive to develop.</p>
+<p>This can create a feedback loop:</p>
+<p><strong>Smaller installed base → Fewer dedicated applications → Lower consumer incentive → Smaller future market</strong></p>
+<p>This is an economic and ecosystem interpretation rather than proof that one single factor caused Kinect&rsquo;s decline.</p>
+<p>Nevertheless, it helps explain why a technically functional input device can struggle after losing guaranteed platform support.</p>
+<h3 id="64-discontinuation">
+  6.4 Discontinuation
+  <a class="heading-link" href="#64-discontinuation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Microsoft eventually stopped producing the Xbox Kinect hardware in 2017.</p>
+<p>By then, the product had moved from a central part of the Xbox strategy to an optional accessory and finally to a discontinued consumer device.</p>
+<p>The commercial outcome shows that strong initial sales do not necessarily translate into long-term integration into a platform.</p>
+<h2 id="7-was-kinect-actually-a-technological-failure">
+  7. Was Kinect Actually a Technological Failure?
+  <a class="heading-link" href="#7-was-kinect-actually-a-technological-failure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I would distinguish three different outcomes.</p>
+<p><strong>First, Kinect was a technical achievement.</strong> It brought affordable depth sensing and real-time human pose estimation into consumer gaming.</p>
+<p><strong>Second, Kinect was a partial interaction success.</strong> It worked particularly well for experiences where physical movement was the main activity, such as dancing and exercise.</p>
+<p><strong>Third, Kinect failed to become a universal mainstream controller.</strong> Its advantages did not consistently outweigh the convenience, precision, and versatility of conventional input devices.</p>
+<p>The underlying technologies continued to have value beyond Xbox gaming.</p>
+<p>Depth sensing and skeletal tracking became useful research tools in robotics, rehabilitation, motion analysis, and three-dimensional perception.</p>
+<p>Microsoft also developed later Kinect-related sensing products for developers, although the continuation of a technology does not imply that the original consumer product remained commercially viable.</p>
+<p>Therefore, Kinect is better described as a <strong>commercially discontinued interaction platform with lasting technological contributions</strong>, rather than a fundamentally unsuccessful sensing technology.</p>
+<h2 id="8-what-could-have-improved-its-chances">
+  8. What Could Have Improved Its Chances?
+  <a class="heading-link" href="#8-what-could-have-improved-its-chances">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Several design decisions might have made Kinect more sustainable.</p>
+<p>First, Kinect could have been positioned as a complementary input method rather than a replacement for conventional controllers.</p>
+<p>For example, a game could use a controller for precise actions and body tracking for selected movements or immersive features.</p>
+<p>Second, the product could have focused on applications where physical movement provided an obvious benefit, including exercise, dance, training, and rehabilitation.</p>
+<p>Third, more robust gesture feedback and easier calibration could have reduced the effort required to use the device.</p>
+<p>Finally, a clearer long-term platform strategy might have helped developers decide whether Kinect-specific software was worth creating.</p>
+<p>These are proposed alternatives, not experimentally proven explanations of what would have saved the product.</p>
+<p>They illustrate how HCI design choices and business strategy interact with technical capability.</p>
+<h2 id="9-conclusion">
+  9. Conclusion
+  <a class="heading-link" href="#9-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Microsoft Kinect is a valuable case study because it demonstrates that technological innovation and interaction success are not equivalent.</p>
+<p>Its depth-sensing hardware and human pose estimation algorithms were important engineering achievements.</p>
+<p>Its early commercial performance also demonstrated genuine consumer interest in controller-free interaction.</p>
+<p>However, the device struggled to become a general-purpose gaming controller because full-body gestures were not always the most efficient, precise, comfortable, or practical way to control software.</p>
+<p>The decision to remove Kinect from the standard Xbox One package further changed its position in the gaming ecosystem.</p>
+<p>In my view, Kinect did not fail because the idea of natural interaction was fundamentally wrong. It struggled because a promising interaction technique was expected to serve too many different tasks.</p>
+<p>The broader lesson for HCI is that <strong>the best input method is not necessarily the most technologically sophisticated or physically natural one. It is the method that best fits the user&rsquo;s task, environment, abilities, and expectations.</strong></p>
+<h2 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Guinness World Records. <em>Fastest-selling gaming peripheral: Kinect for Xbox 360</em>. <a href="https://www.guinnessworldrecords.com/world-records/fastest-selling-gaming-peripheral"  class="external-link" target="_blank" rel="noopener">https://www.guinnessworldrecords.com/world-records/fastest-selling-gaming-peripheral</a></p>
+</li>
+<li>
+<p>Shotton, J., et al. (2011). <em>Real-Time Human Pose Recognition in Parts from a Single Depth Image</em>. IEEE CVPR. <a href="https://www.microsoft.com/en-us/research/publication/real-time-human-pose-recognition-in-parts-from-a-single-depth-image/"  class="external-link" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/publication/real-time-human-pose-recognition-in-parts-from-a-single-depth-image/</a></p>
+</li>
+<li>
+<p>Shotton, J., et al. (2013). <em>Efficient Human Pose Estimation from Single Depth Images</em>. IEEE Transactions on Pattern Analysis and Machine Intelligence, 35(12), 2821–2840. <a href="https://doi.org/10.1109/TPAMI.2012.241"  class="external-link" target="_blank" rel="noopener">https://doi.org/10.1109/TPAMI.2012.241</a></p>
+</li>
+<li>
+<p>Microsoft. (2013). <em>Xbox One Ignites a New Era of Games and Entertainment This November</em>. <a href="https://news.microsoft.com/source/2013/06/10/xbox-one-ignites-a-new-era-of-games-and-entertainment-this-november/"  class="external-link" target="_blank" rel="noopener">https://news.microsoft.com/source/2013/06/10/xbox-one-ignites-a-new-era-of-games-and-entertainment-this-november/</a></p>
+</li>
+<li>
+<p>GameSpot. (2014). <em>$399 Xbox One Without Kinect Launching in June</em>. <a href="https://www.gamespot.com/articles/399-xbox-one-without-kinect-launching-in-june/1100-6419601/"  class="external-link" target="_blank" rel="noopener">https://www.gamespot.com/articles/399-xbox-one-without-kinect-launching-in-june/1100-6419601/</a></p>
+</li>
+<li>
+<p>Ars Technica. (2018). <em>RIP Kinect: 2010–2017(ish)</em>. <a href="https://arstechnica.com/gaming/2018/01/rip-kinect-2010-2017ish/"  class="external-link" target="_blank" rel="noopener">https://arstechnica.com/gaming/2018/01/rip-kinect-2010-2017ish/</a></p>
+</li>
+</ol>
+
+      </div>
+
+
+      <footer>
+        
+
+
+
+  
+  
+  <nav class="homework-nav" aria-label="Homework 2 lecture navigation">
+    <a href="/myblog/posts/hci-homework-2/">HCI Homework 2 · All lectures</a>
+    <div class="homework-neighbors">
+      
+        
+      
+        
+          <a rel="prev" href="/myblog/posts/hci-homework-2/lecture-5/">← Previous: Lecture 5</a>
+        
+      
+        
+      
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </nav>
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector('.post-content') || document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Lu 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/myblog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

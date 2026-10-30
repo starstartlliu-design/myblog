@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Courses on Lu&#39;s Blog</title>
+		<link>https://starstartlliu-design.github.io/myblog/courses/</link>
+		<description>Recent content in Courses on Lu&#39;s Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="https://starstartlliu-design.github.io/myblog/courses/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HCI</title>
+				<link>https://starstartlliu-design.github.io/myblog/courses/hci/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/courses/hci/</guid>
+				<description>&lt;h2 id=&#34;coursework&#34;&gt;&#xD;&#xA;  Coursework&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#coursework&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://starstartlliu-design.github.io/myblog/posts/hci-homework-1/&#34; &gt;HCI Homework 1&lt;/a&gt;: Affordances, Gestalt Laws, and Dark Design Patterns.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/&#34; &gt;HCI Homework 2&lt;/a&gt;: Lecture 4, Lecture 5, and Lecture 6.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

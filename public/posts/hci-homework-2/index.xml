@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>HCI Homework 2 on Lu&#39;s Blog</title>
+		<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/</link>
+		<description>Recent content in HCI Homework 2 on Lu&#39;s Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0200</lastBuildDate>
+		
+			<atom:link href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-4/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-4/</guid>
+				<description>&lt;h1 id=&#34;beyond-conventional-interfaces-chris-harrisons-research-on-sensing-and-haptic-interaction&#34;&gt;&#xD;&#xA;  Beyond Conventional Interfaces: Chris Harrison&amp;rsquo;s Research on Sensing and Haptic Interaction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#beyond-conventional-interfaces-chris-harrisons-research-on-sensing-and-haptic-interaction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;HCI Homework 2 — Lecture 4&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introduction-who-is-chris-harrison&#34;&gt;&#xD;&#xA;  1. Introduction: Who Is Chris Harrison?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction-who-is-chris-harrison&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Chris Harrison is a professor at Carnegie Mellon University&amp;rsquo;s Human-Computer Interaction Institute (HCII) and the director of the Future Interfaces Group (FIG). His research explores new ways for people to interact with computers by combining sensing technologies, computer vision, physical computing, and interface design.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>From Virtual Images to Physical Reality: Revisiting Ivan Sutherland’s The Ultimate Display</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-5/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-5/</guid>
+				<description>&lt;h1 id=&#34;from-virtual-images-to-physical-reality-revisiting-ivan-sutherlands-the-ultimate-display&#34;&gt;&#xD;&#xA;  From Virtual Images to Physical Reality: Revisiting Ivan Sutherland&amp;rsquo;s &lt;em&gt;The Ultimate Display&lt;/em&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#from-virtual-images-to-physical-reality-revisiting-ivan-sutherlands-the-ultimate-display&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;HCI Homework 2 — Lecture 5&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introduction&#34;&gt;&#xD;&#xA;  1. Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In 1965, Ivan Sutherland published &lt;em&gt;The Ultimate Display&lt;/em&gt;, a short but remarkably influential paper describing how computers might transform human interaction with virtual environments.&lt;/p&gt;&#xA;&lt;p&gt;At a time when computer graphics and interactive displays were still emerging, Sutherland imagined systems that could respond to human movement, recognize gaze direction, generate physical forces, and present experiences that would otherwise be impossible in the real world.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-6/</link>
+				<pubDate>Sat, 31 Oct 2026 00:00:00 +0200</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-6/</guid>
+				<description>&lt;h1 id=&#34;the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success&#34;&gt;&#xD;&#xA;  The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;HCI Homework 2 — Lecture 6&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introduction&#34;&gt;&#xD;&#xA;  1. Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In November 2010, Microsoft introduced Kinect for the Xbox 360, a motion-sensing device that allowed people to control games using their bodies instead of conventional handheld controllers.&lt;/p&gt;&#xA;&lt;p&gt;The concept was ambitious: users could become the controller themselves. By combining depth sensing, computer vision, and real-time human pose estimation, Kinect made full-body interaction available to millions of consumers.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

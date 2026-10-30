@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction · Lu&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Lu">
+<meta name="description" content="
+  Beyond Conventional Interfaces: Chris Harrison&rsquo;s Research on Sensing and Haptic Interaction
+  
+    
+    Link to heading
+  
+
+HCI Homework 2 — Lecture 4
+
+  1. Introduction: Who Is Chris Harrison?
+  
+    
+    Link to heading
+  
+
+Chris Harrison is a professor at Carnegie Mellon University&rsquo;s Human-Computer Interaction Institute (HCII) and the director of the Future Interfaces Group (FIG). His research explores new ways for people to interact with computers by combining sensing technologies, computer vision, physical computing, and interface design.">
+<meta name="keywords" content="">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction">
+	<meta name="twitter:description" content="Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic InteractionLink to headingHCI Homework 2 — Lecture 4
+1. Introduction: Who Is Chris Harrison?Link to headingChris Harrison is a professor at Carnegie Mellon University’s Human-Computer Interaction Institute (HCII) and the director of the Future Interfaces Group (FIG). His research explores new ways for people to interact with computers by combining sensing technologies, computer vision, physical computing, and interface design.">
+
+<meta property="og:url" content="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-4/">
+	<meta property="og:site_name" content="Lu&#39;s Blog">
+	<meta property="og:title" content="Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction">
+	<meta property="og:description" content="Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic InteractionLink to headingHCI Homework 2 — Lecture 4
+1. Introduction: Who Is Chris Harrison?Link to headingChris Harrison is a professor at Carnegie Mellon University’s Human-Computer Interaction Institute (HCII) and the director of the Future Interfaces Group (FIG). His research explores new ways for people to interact with computers by combining sensing technologies, computer vision, physical computing, and interface design.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-10-31T00:00:00+02:00">
+		<meta property="article:modified_time" content="2026-10-31T00:00:00+02:00">
+		<meta property="article:tag" content="HCI">
+		<meta property="article:tag" content="Homework 2">
+
+
+
+
+<link rel="canonical" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-4/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/myblog/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/myblog/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/myblog/css/homework.min.f5308cd878e0b0cbeab0074707035f1405774f988320f41eada412b8735bb544.css" integrity="sha256-9TCM2HjgsMvqsAdHBwNfFAV3T5iDIPQeraQSuHNbtUQ=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://starstartlliu-design.github.io/myblog/">
+      Lu&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/courses/hci/">HCI</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/hci-homework-2/">HCI Homework 2</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-2/lecture-4/">
+              Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-10-31T00:00:00&#43;02:00">
+                October 31, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              12-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/myblog/categories/human-computer-interaction/">Human-Computer Interaction</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/myblog/tags/hci/">HCI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/homework-2/">Homework 2</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <h1 id="beyond-conventional-interfaces-chris-harrisons-research-on-sensing-and-haptic-interaction">
+  Beyond Conventional Interfaces: Chris Harrison&rsquo;s Research on Sensing and Haptic Interaction
+  <a class="heading-link" href="#beyond-conventional-interfaces-chris-harrisons-research-on-sensing-and-haptic-interaction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><strong>HCI Homework 2 — Lecture 4</strong></p>
+<h2 id="1-introduction-who-is-chris-harrison">
+  1. Introduction: Who Is Chris Harrison?
+  <a class="heading-link" href="#1-introduction-who-is-chris-harrison">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Chris Harrison is a professor at Carnegie Mellon University&rsquo;s Human-Computer Interaction Institute (HCII) and the director of the Future Interfaces Group (FIG). His research explores new ways for people to interact with computers by combining sensing technologies, computer vision, physical computing, and interface design.</p>
+<p>Traditional human-computer interaction relies heavily on keyboards, mice, touchscreens, and other dedicated input devices. Although these technologies are effective, they also constrain interaction to particular devices and predefined gestures. Emerging technologies such as augmented reality (AR), mixed reality (MR), and virtual reality (VR) create opportunities for more natural interaction involving the human body and the surrounding physical environment.</p>
+<p>Harrison&rsquo;s research is particularly interesting because it investigates how physical phenomena can become useful interaction signals. Rather than treating shadows, optical reflections, or mechanical forces as isolated engineering problems, his research group uses them to develop practical interactive systems.</p>
+<p>Three recent projects illustrate this approach:</p>
+<ul>
+<li>
+<p><strong>EclipseTouch (2025):</strong> Detecting touch on ordinary surfaces using infrared shadows.</p>
+</li>
+<li>
+<p><strong>HiFiGaze (2026):</strong> Improving eye tracking by analyzing reflections of screen content.</p>
+</li>
+<li>
+<p><strong>Kinethreads (2025):</strong> Generating full-body force feedback through a wearable cable-driven system.</p>
+</li>
+</ul>
+<p>These projects represent three complementary aspects of HCI: touch sensing, gaze-based input, and physical feedback.</p>
+<h2 id="2-eclipsetouch-touch-detection-through-infrared-shadow-geometry">
+  2. EclipseTouch: Touch Detection Through Infrared Shadow Geometry
+  <a class="heading-link" href="#2-eclipsetouch-touch-detection-through-infrared-shadow-geometry">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="21-research-problem">
+  2.1 Research Problem
+  <a class="heading-link" href="#21-research-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>In conventional touchscreen systems, touch detection depends on sensors integrated into the display surface. This works well for smartphones and tablets but becomes less convenient in mixed reality, where users may want to interact with virtual content positioned on ordinary desks, walls, or other physical objects.</p>
+<p>One alternative is mid-air hand tracking. However, interacting with floating interfaces may require users to hold their arms in uncomfortable positions, and accurately distinguishing an intentional touch from a nearby finger can be difficult.</p>
+<p>EclipseTouch addresses this problem by detecting contact with everyday surfaces that have no dedicated sensing hardware.</p>
+<h3 id="22-physical-principle-shadow-projection">
+  2.2 Physical Principle: Shadow Projection
+  <a class="heading-link" href="#22-physical-principle-shadow-projection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The central idea is that the geometry of a shadow contains information about the three-dimensional position of the object casting it.</p>
+<p>When infrared light illuminates a finger above a surface, the finger blocks part of the light and creates a shadow. As the finger moves toward or away from the surface, the relative position and shape of its shadow change.</p>
+<p>This can be illustrated using a simplified geometric model.</p>
+<p>Suppose a point light source is located at height \(H\) above a horizontal surface. A point on the finger is located at height \(h\), with a horizontal distance \(d\) from the light source&rsquo;s vertical projection.</p>
+<p>Using similar triangles, the horizontal displacement between the finger point and its projected shadow is</p>
+\[\Delta x=\frac{dh}{H-h}.\]<p>This equation shows that shadow displacement depends on the finger&rsquo;s height relative to the surface.</p>
+<p>As \(h\) approaches zero, the displacement approaches zero in this idealized model. Therefore, shadow geometry can provide information relevant to distinguishing hovering from physical contact.</p>
+<p><strong>This equation is a simplified physical explanation, not a reproduction of the EclipseTouch algorithm.</strong> The actual research system uses structured infrared shadows and image-based processing rather than relying on this single geometric expression.</p>
+<h3 id="23-system-implementation">
+  2.3 System Implementation
+  <a class="heading-link" href="#23-system-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>EclipseTouch integrates a computer-triggered camera with one or more infrared emitters in a head-worn sensing configuration.</p>
+<p>The infrared emitters illuminate the interaction region, while the camera observes the resulting shadow patterns. The system processes these images to estimate whether the finger is touching the surface and how far it is hovering above it.</p>
+<p>The use of infrared illumination is useful because it provides a sensing signal separate from the visible interface presented to the user.</p>
+<p>A key engineering advantage is that the physical surface does not require embedded electronics. Much of the sensing functionality is instead provided by the wearable device.</p>
+<h3 id="24-experimental-results-and-limitations">
+  2.4 Experimental Results and Limitations
+  <a class="heading-link" href="#24-experimental-results-and-limitations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The researchers reported:</p>
+<ul>
+<li>
+<p><strong>98.0% accuracy</strong> for detecting touch contact.</p>
+</li>
+<li>
+<p><strong>6.9 mm mean error</strong> for estimating hover distance.</p>
+</li>
+</ul>
+<p>The evaluation also examined different surface materials, interaction orientations, and lighting conditions.</p>
+<p>These results demonstrate the feasibility of infrared shadow-based touch detection. However, the reported accuracy describes the tested conditions rather than a guarantee of identical performance in every environment.</p>
+<p>From an engineering perspective, several challenges remain important. Surface reflectance can affect image quality, environmental illumination can influence infrared contrast, and occlusion may complicate the interpretation of overlapping shadows.</p>
+<h3 id="25-contribution-to-hci">
+  2.5 Contribution to HCI
+  <a class="heading-link" href="#25-contribution-to-hci">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>EclipseTouch illustrates how ordinary physical environments can become interactive without being modified internally.</p>
+<p>Its significance is not merely accurate finger tracking. More importantly, it provides an approach to connecting digital interfaces with physical surfaces, potentially making mixed-reality interaction more natural and less dependent on specialized hardware.</p>
+<h2 id="3-hifigaze-eye-tracking-using-optical-reflections">
+  3. HiFiGaze: Eye Tracking Using Optical Reflections
+  <a class="heading-link" href="#3-hifigaze-eye-tracking-using-optical-reflections">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="31-research-problem">
+  3.1 Research Problem
+  <a class="heading-link" href="#31-research-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Eye tracking estimates where a person is looking and can support gaze-controlled interfaces, attention-aware applications, accessibility technologies, and immersive systems.</p>
+<p>High-precision eye-tracking systems often require specialized cameras and illumination. Consumer devices, by contrast, typically use ordinary front-facing cameras, making accurate gaze estimation more challenging.</p>
+<p>HiFiGaze investigates whether the display itself can provide additional information for estimating gaze direction.</p>
+<p>The researchers exploit a simple observation: light emitted by a screen can be reflected by the user&rsquo;s eyes, and modern high-resolution cameras can capture these reflections.</p>
+<h3 id="32-optical-principle-corneal-reflection">
+  3.2 Optical Principle: Corneal Reflection
+  <a class="heading-link" href="#32-optical-principle-corneal-reflection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The anterior surface of the cornea is a curved optical interface. Because the refractive indices of air and the cornea differ, part of the incident light is reflected.</p>
+<p>For conceptual understanding, the corneal surface can be approximated as a convex reflecting surface.</p>
+<p>When a person looks in different directions, the orientation of the eye changes. Consequently, the position, shape, and visible extent of the screen reflection in the camera image can also change.</p>
+<p>This reflection contains information about the spatial relationship among the display, the eye, and the camera.</p>
+<p>However, the reflection alone is difficult to interpret because screen content changes continuously. A bright rectangular window, for example, produces a different reflected pattern from a dark image.</p>
+<p>HiFiGaze introduces an important additional constraint: <strong>the computer already knows exactly what it is displaying.</strong></p>
+<p>The displayed image can therefore serve as useful prior information for identifying and interpreting the reflected screen region.</p>
+<h3 id="33-system-implementation">
+  3.3 System Implementation
+  <a class="heading-link" href="#33-system-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The approach combines three main information sources:</p>
+<ol>
+<li>
+<p><strong>Eye images:</strong> A front-facing camera captures the user&rsquo;s eyes and their visible reflections.</p>
+</li>
+<li>
+<p><strong>Known screen content:</strong> The computer provides information about the image currently displayed.</p>
+</li>
+<li>
+<p><strong>Computational gaze estimation:</strong> The system uses reflection-related features and image-based modeling to estimate the user&rsquo;s gaze location.</p>
+</li>
+</ol>
+<p>A major challenge is reflection segmentation: identifying the screen reflection within an eye image that also contains the pupil, iris, eyelids, eyelashes, and other visual features.</p>
+<p>Knowledge of the displayed content helps the system distinguish relevant reflected patterns from unrelated image information.</p>
+<p>The research evaluates different strategies for incorporating this additional signal into gaze estimation.</p>
+<p>Importantly, the system should not be understood as a purely geometric calculation based on a perfectly spherical eye. Its contribution involves combining optical information with computational image analysis.</p>
+<h3 id="34-experimental-results">
+  3.4 Experimental Results
+  <a class="heading-link" href="#34-experimental-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The published CHI 2026 project description reports that the best-performing model reduces mean gaze-tracking error by approximately <strong>18%</strong> compared with an appearance-based baseline.</p>
+<p>A supplementary study reports an additional <strong>10–20% improvement</strong> when the gaze-tracking camera is positioned at the bottom of the device.</p>
+<p>These percentages describe relative improvements over particular experimental configurations. They do not represent absolute tracking accuracy.</p>
+<p>The camera-placement result is especially interesting from an optical engineering perspective because it demonstrates that sensor geometry can substantially influence the quality of the information available to the algorithm.</p>
+<h3 id="35-individual-eye-differences-and-technical-limitations">
+  3.5 Individual Eye Differences and Technical Limitations
+  <a class="heading-link" href="#35-individual-eye-differences-and-technical-limitations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An important question is whether the method performs equally well for users with different eye geometries.</p>
+<p>Human eyes vary in corneal curvature, eye orientation, eyelid anatomy, and other optical characteristics. High myopia is often associated with increased axial length, although this does not necessarily imply a corresponding change in corneal curvature.</p>
+<p>Corrective glasses may introduce additional reflections and optical distortions.</p>
+<p>These factors could affect reflection visibility or the relationship between measured image features and gaze direction.</p>
+<p>Therefore, performance across different refractive conditions should be treated as an important validation question rather than assumed to be identical.</p>
+<p>Other practical limitations include insufficient screen brightness, small reflection regions, limited camera resolution, and partial occlusion by eyelids or eyelashes.</p>
+<h3 id="36-contribution-to-hci">
+  3.6 Contribution to HCI
+  <a class="heading-link" href="#36-contribution-to-hci">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>HiFiGaze demonstrates how information that is already available within a computing device can improve interaction sensing.</p>
+<p>Instead of relying entirely on additional hardware, the system makes use of the display, camera, and known screen content.</p>
+<p>Its broader contribution is the possibility of making gaze-based interaction more accessible on ordinary computing devices.</p>
+<h2 id="4-kinethreads-full-body-haptic-feedback-through-mechanical-force">
+  4. Kinethreads: Full-Body Haptic Feedback Through Mechanical Force
+  <a class="heading-link" href="#4-kinethreads-full-body-haptic-feedback-through-mechanical-force">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="41-research-problem">
+  4.1 Research Problem
+  <a class="heading-link" href="#41-research-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Visual and auditory feedback are well developed in modern VR systems. Physical force feedback, however, remains difficult to reproduce.</p>
+<p>Most consumer haptic suits rely on vibration motors. These can indicate events such as impacts or contact, but they cannot fully simulate the sensation of holding a heavy object or experiencing resistance to movement.</p>
+<p>This distinction corresponds to two important concepts:</p>
+<ul>
+<li>
+<p><strong>Tactile feedback:</strong> Sensations detected primarily through the skin, such as vibration and pressure.</p>
+</li>
+<li>
+<p><strong>Kinesthetic feedback:</strong> Sensations related to forces, body movement, muscle effort, and joint position.</p>
+</li>
+</ul>
+<p>Kinethreads focuses on expanding kinesthetic feedback while avoiding the bulk and expense associated with many rigid robotic exoskeletons.</p>
+<h3 id="42-mechanical-principle-from-motor-torque-to-cable-tension">
+  4.2 Mechanical Principle: From Motor Torque to Cable Tension
+  <a class="heading-link" href="#42-mechanical-principle-from-motor-torque-to-cable-tension">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The system uses motor-driven strings and pulley mechanisms to apply forces to different parts of the body.</p>
+<p>A motor generates rotational torque, which is converted into cable tension through a reel.</p>
+<p>For a simplified ideal system,</p>
+\[F=\frac{\tau}{r},\]<p>where \(F\) is cable tension, \(\tau\) is motor torque, and \(r\) is the effective reel radius.</p>
+<p>For example, a torque of 0.4 N·m applied to a reel with a radius of 0.01 m would produce an ideal cable tension of 40 N.</p>
+<p>This is an illustrative calculation, not a reported measurement from Kinethreads.</p>
+<p>Pulley arrangements can redirect forces and provide mechanical advantage. In an idealized pulley system, the output force may increase at the expense of cable displacement and speed.</p>
+<p>This reflects the principle of conservation of energy: mechanical advantage does not create additional energy.</p>
+<h3 id="43-system-design">
+  4.3 System Design
+  <a class="heading-link" href="#43-system-design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Kinethreads distributes motor-pulley mechanisms across a soft wearable suit.</p>
+<p>Instead of using rigid mechanical arms to control the user&rsquo;s joints, it applies tension through flexible strings.</p>
+<p>The researchers explored different pulley configurations to redirect, distribute, and amplify forces. For example, compound pulley arrangements can distribute loading across larger body regions while increasing mechanical advantage.</p>
+<p>The system can generate several categories of effects, including simulated object weight, body compression, acceleration-related forces, and vibration.</p>
+<p>This makes it possible to combine multiple kinds of haptic feedback in a single wearable system.</p>
+<h3 id="44-experimental-performance">
+  4.4 Experimental Performance
+  <a class="heading-link" href="#44-experimental-performance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The research prototype demonstrates several notable characteristics:</p>
+<ul>
+<li>
+<p><strong>Weight:</strong> Less than 5 kg.</p>
+</li>
+<li>
+<p><strong>Hardware cost:</strong> Approximately US$400.</p>
+</li>
+<li>
+<p><strong>Maximum reported force:</strong> Up to 120 N in a specified configuration.</p>
+</li>
+<li>
+<p><strong>Wearing time:</strong> Less than 30 seconds.</p>
+</li>
+</ul>
+<p>The reported 120 N capability is associated with a mechanically advantageous pulley configuration; it should not be interpreted as a force continuously available at every point on the body.</p>
+<p>The researchers also conducted performance evaluations and a user study to investigate the system&rsquo;s capabilities.</p>
+<p>These results are significant because they demonstrate a relatively lightweight and inexpensive approach to force feedback, rather than relying on a large rigid exoskeleton.</p>
+<h3 id="45-fundamental-mechanical-limitations">
+  4.5 Fundamental Mechanical Limitations
+  <a class="heading-link" href="#45-fundamental-mechanical-limitations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The main physical limitation is that a flexible cable can generate tension but cannot directly generate compression.</p>
+<p>A cable can pull the user&rsquo;s arm in a particular direction, but it cannot push the arm outward in the same way as a rigid actuator.</p>
+<p>Consequently, the system cannot reproduce arbitrary three-dimensional forces.</p>
+<p>The available force directions also depend on the attachment points, cable routing, and body posture.</p>
+<p>Additional engineering challenges include mechanical friction, actuator response, power consumption, comfort, and the need to prevent excessive forces on the user.</p>
+<h3 id="46-contribution-to-hci">
+  4.6 Contribution to HCI
+  <a class="heading-link" href="#46-contribution-to-hci">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Kinethreads expands the concept of computer output beyond visual, auditory, and vibration-based feedback.</p>
+<p>It demonstrates how mechanical systems can communicate information directly through physical forces.</p>
+<p>For immersive interaction, this could improve the perceived weight of virtual objects, the sensation of movement, and the physical realism of simulated environments.</p>
+<h2 id="5-discussion-a-shared-engineering-philosophy">
+  5. Discussion: A Shared Engineering Philosophy
+  <a class="heading-link" href="#5-discussion-a-shared-engineering-philosophy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Although EclipseTouch, HiFiGaze, and Kinethreads address different problems, they share a common research philosophy: using physical principles to create new channels of communication between humans and computers.</p>
+<p>EclipseTouch uses infrared shadow geometry to detect physical contact. HiFiGaze transforms optical reflections into gaze-related information. Kinethreads converts motor-generated mechanical forces into bodily feedback.</p>
+<p>The first two projects focus primarily on sensing human actions, while the third focuses on generating physical responses.</p>
+<p>Together, they illustrate a broader interaction loop:</p>
+<p><strong>Human action → Physical sensing → Computational interpretation → System response → Human perception</strong></p>
+<p>This perspective is especially interesting because it connects HCI with optics, mechanics, electronics, and computational modeling.</p>
+<p>From my perspective, one of the most valuable lessons is that new interfaces do not always require entirely new physical principles. Sometimes the innovation comes from recognizing that an existing phenomenon contains information that has not yet been effectively used.</p>
+<p>For example, a shadow can reveal contact geometry, and a screen reflection can provide clues about gaze direction.</p>
+<p>However, an elegant physical principle alone is insufficient for a successful interface. Practical systems must also account for environmental variation, individual differences, usability, reliability, cost, and comfort.</p>
+<p>Therefore, evaluating an HCI technology requires both engineering performance measurements and consideration of the actual user experience.</p>
+<h2 id="6-conclusion">
+  6. Conclusion
+  <a class="heading-link" href="#6-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Chris Harrison&rsquo;s recent research demonstrates how sensing and actuation technologies can extend human-computer interaction beyond conventional input and output devices.</p>
+<p>EclipseTouch explores touch sensing on ordinary surfaces, HiFiGaze improves gaze estimation through screen reflections, and Kinethreads provides distributed force feedback through wearable mechanical systems.</p>
+<p>Their shared contribution is the transformation of physical phenomena into practical interaction techniques.</p>
+<p>These projects also illustrate an important direction for future HCI research: creating interfaces that are not confined to traditional screens and controllers, but are increasingly integrated with human perception, movement, and the surrounding physical world.</p>
+<h2 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Future Interfaces Group, Carnegie Mellon University. <em>Research Projects</em>. <a href="https://www.figlab.com/research"  class="external-link" target="_blank" rel="noopener">https://www.figlab.com/research</a></p>
+</li>
+<li>
+<p>Mollyn, V., DeVrio, N., &amp; Harrison, C. (2025). <em>EclipseTouch: Touch Segmentation on Ad Hoc Surfaces using Worn Infrared Shadow Casting</em>. Proceedings of ACM UIST 2025. <a href="https://doi.org/10.1145/3746059.3747743"  class="external-link" target="_blank" rel="noopener">https://doi.org/10.1145/3746059.3747743</a></p>
+</li>
+<li>
+<p>Kim, T., Mollyn, V., Arakawa, R., &amp; Harrison, C. (2026). <em>HiFiGaze: Improving Eye Tracking Accuracy Using Screen Content Knowledge</em>. Proceedings of ACM CHI 2026. <a href="https://doi.org/10.1145/3772318.3791339"  class="external-link" target="_blank" rel="noopener">https://doi.org/10.1145/3772318.3791339</a></p>
+</li>
+<li>
+<p>Shen, V., &amp; Harrison, C. (2025). <em>Kinethreads: Soft Full-Body Haptic Exosuit using Low-Cost Motor-Pulley Mechanisms</em>. Proceedings of ACM UIST 2025. <a href="https://doi.org/10.1145/3746059.3747755"  class="external-link" target="_blank" rel="noopener">https://doi.org/10.1145/3746059.3747755</a></p>
+</li>
+</ol>
+
+      </div>
+
+
+      <footer>
+        
+
+
+
+  
+  
+  <nav class="homework-nav" aria-label="Homework 2 lecture navigation">
+    <a href="/myblog/posts/hci-homework-2/">HCI Homework 2 · All lectures</a>
+    <div class="homework-neighbors">
+      
+        
+      
+        
+      
+        
+      
+      
+        
+      
+        
+          <a rel="next" href="/myblog/posts/hci-homework-2/lecture-5/">Next: Lecture 5 →</a>
+        
+      
+        
+      
+    </div>
+  </nav>
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector('.post-content') || document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Lu 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/myblog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

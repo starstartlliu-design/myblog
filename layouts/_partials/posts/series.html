@@ -1,0 +1,50 @@
+{{ $currentPageUrl := .RelPermalink }}
+{{ if .Params.series }}
+<section class="see-also">
+  {{ range .Params.series }}
+    {{ $name := . | anchorize }}
+    {{ $series := index $.Site.Taxonomies.series $name }}
+    {{ if gt (len $series.Pages) 1 }}
+      <h3 id="{{ i18n "see_also" | default "See also in" | anchorize }}-{{ anchorize . | safeURL }}">
+        {{ i18n "see_also" | default "See also in" }} {{ . }}
+        <a class="heading-link" href="#{{ i18n "see_also" | default "See also in" | anchorize }}-{{ anchorize . | safeURL }}">
+          <i class="fa-solid fa-link" aria-hidden="true" title="{{ i18n "link_to_heading" | default "Link to heading" }}"></i>
+          <span class="sr-only">{{ i18n "link_to_heading" | default "Link to heading" }}</span>
+        </a>
+      </h3>
+      <nav>
+        <ul>
+        {{ $maxItems := $.Site.Params.maxSeeAlsoItems | default 5 }}
+        {{ range first (add $maxItems 1) $series.Pages }}
+          {{ if ne .RelPermalink $currentPageUrl }}
+            <li>
+              <a href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}
+
+{{ if eq .Params.homework "hci-homework-2" }}
+  {{ $current := . }}
+  {{ $lectures := (where .Site.RegularPages "Params.homework" "hci-homework-2").ByWeight }}
+  <nav class="homework-nav" aria-label="Homework 2 lecture navigation">
+    <a href="{{ with .Site.GetPage "/posts/hci-homework-2" }}{{ .RelPermalink }}{{ end }}">HCI Homework 2 · All lectures</a>
+    <div class="homework-neighbors">
+      {{ range $lectures }}
+        {{ if eq (int .Params.lecture) (sub (int $current.Params.lecture) 1) }}
+          <a rel="prev" href="{{ .RelPermalink }}">← Previous: Lecture {{ .Params.lecture }}</a>
+        {{ end }}
+      {{ end }}
+      {{ range $lectures }}
+        {{ if eq (int .Params.lecture) (add (int $current.Params.lecture) 1) }}
+          <a rel="next" href="{{ .RelPermalink }}">Next: Lecture {{ .Params.lecture }} →</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </nav>
+{{ end }}
