@@ -28,11 +28,6 @@ url = "courses/hci/"
     [markup.goldmark.renderer] 
       unsafe = true
 
-[[menu.main]]
-name = "HCI Homework 2"
-weight = 3
-url = "posts/hci-homework-2/"
-
 [markup.goldmark.extensions.passthrough]
 enable = true
 [markup.goldmark.extensions.passthrough.delimiters]
