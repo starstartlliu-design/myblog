@@ -1,0 +1,27 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  {{ if and (eq .Kind "section") .Parent.IsHome }}
+    <section class="container list">
+      <header>
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+        </h1>
+      </header>
+      {{ .Content }}
+      <ul>
+        {{/* Include immediate child sections as homework entries, without listing their lectures. */}}
+        {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
+          <li>
+            <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+            <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      {{ partial "pagination.html" . }}
+    </section>
+  {{ else }}
+    {{ partial "list.html" . }}
+  {{ end }}
+{{ end }}
