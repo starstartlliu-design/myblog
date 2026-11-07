@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment · Lu&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Lu">
+<meta name="description" content="An academic blog setup and a moving-target PPO experiment, with verified results, debugging records, and limitations.">
+<meta name="keywords" content="">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment">
+	<meta name="twitter:description" content="An academic blog setup and a moving-target PPO experiment, with verified results, debugging records, and limitations.">
+
+<meta property="og:url" content="https://starstartlliu-design.github.io/myblog/posts/hci-lab-1/">
+	<meta property="og:site_name" content="Lu&#39;s Blog">
+	<meta property="og:title" content="HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment">
+	<meta property="og:description" content="An academic blog setup and a moving-target PPO experiment, with verified results, debugging records, and limitations.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-11-07T12:00:00+01:00">
+		<meta property="article:modified_time" content="2026-11-07T12:00:00+01:00">
+		<meta property="article:tag" content="HCI">
+		<meta property="article:tag" content="Hugo">
+		<meta property="article:tag" content="Unity">
+		<meta property="article:tag" content="Reinforcement Learning">
+
+
+
+
+<link rel="canonical" href="https://starstartlliu-design.github.io/myblog/posts/hci-lab-1/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/myblog/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/myblog/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/myblog/css/homework.min.f5308cd878e0b0cbeab0074707035f1405774f988320f41eada412b8735bb544.css" integrity="sha256-9TCM2HjgsMvqsAdHBwNfFAV3T5iDIPQeraQSuHNbtUQ=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://starstartlliu-design.github.io/myblog/">
+      Lu&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/courses/hci/">HCI</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://starstartlliu-design.github.io/myblog/posts/hci-lab-1/">
+              HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-11-07T12:00:00&#43;01:00">
+                November 7, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              22-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/myblog/categories/human-computer-interaction/">Human-Computer Interaction</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/myblog/tags/hci/">HCI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/hugo/">Hugo</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/unity/">Unity</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/reinforcement-learning/">Reinforcement Learning</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      
+<details class="entry__toc toc" >
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction">1. Introduction</a></li>
+    <li><a href="#part-i--hugo-blog-setup">Part I — Hugo Blog Setup</a>
+      <ul>
+        <li><a href="#2-objective-tools-and-site-structure">2. Objective, Tools, and Site Structure</a></li>
+        <li><a href="#3-front-matter-a-persistent-parsing-problem">3. Front Matter: A Persistent Parsing Problem</a></li>
+        <li><a href="#4-preview-mathematics-and-deployment">4. Preview, Mathematics, and Deployment</a></li>
+        <li><a href="#5-hugo-setup-results">5. Hugo Setup Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#part-ii--unity-ml-agents-reinforcement-learning-experiment">Part II — Unity ML-Agents Reinforcement Learning Experiment</a>
+      <ul>
+        <li><a href="#6-objective">6. Objective</a></li>
+        <li><a href="#7-development-environment">7. Development Environment</a></li>
+        <li><a href="#8-problems-encountered-during-environment-setup">8. Problems Encountered During Environment Setup</a></li>
+        <li><a href="#9-moving-target-challenge-environment">9. Moving Target Challenge Environment</a></li>
+        <li><a href="#10-implementation-and-testing-problems">10. Implementation and Testing Problems</a></li>
+        <li><a href="#11-ppo-training">11. PPO Training</a></li>
+        <li><a href="#12-independent-evaluation">12. Independent Evaluation</a></li>
+        <li><a href="#13-discussion-why-was-the-learned-policy-not-more-effective">13. Discussion: Why Was the Learned Policy Not More Effective?</a></li>
+        <li><a href="#14-technical-outcomes-and-lessons-learned">14. Technical Outcomes and Lessons Learned</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-overall-conclusion">15. Overall Conclusion</a></li>
+    <li><a href="#references-and-reproducibility">References and Reproducibility</a></li>
+  </ul>
+</nav>
+</details>
+
+
+      <div class="post-content">
+        
+        <style>
+.post-content:has(.hci-lab1-marker) table { display:block; max-width:100%; overflow-x:auto; }
+.post-content:has(.hci-lab1-marker) .katex-display { overflow-x:auto; overflow-y:hidden; padding:.4rem 0; }
+.post-content:has(.hci-lab1-marker) figure { margin:2rem 0; }
+.post-content:has(.hci-lab1-marker) figcaption p { text-align:center; font-size:.9em; }
+</style>
+<p><span class="hci-lab1-marker" hidden></span></p>
+<h2 id="1-introduction">
+  1. Introduction
+  <a class="heading-link" href="#1-introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This laboratory consisted of two main activities: setting up a personal academic blog using Hugo and exploring reinforcement learning with Unity ML-Agents.</p>
+<p>The first activity focused on creating a functional website for documenting HCI coursework. The second involved configuring a Unity reinforcement learning environment, developing a new agent task, training a policy, and evaluating its performance.</p>
+<p>Throughout the laboratory, several technical problems occurred, including Hugo content parsing errors, Unity installation issues, dependency compatibility checks, and difficulties evaluating reinforcement learning performance.</p>
+<p>This report focuses on the implementation process, the problems encountered, the solutions applied, and the results obtained.</p>
+<hr>
+<h2 id="part-i--hugo-blog-setup">
+  Part I — Hugo Blog Setup
+  <a class="heading-link" href="#part-i--hugo-blog-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="2-objective-tools-and-site-structure">
+  2. Objective, Tools, and Site Structure
+  <a class="heading-link" href="#2-objective-tools-and-site-structure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>My first objective was to establish a reusable academic blog for HCI homework, laboratory reports, and reflections. The current project uses Hugo Extended 0.167.0, the hugo-coder theme, Markdown, Git, and GitHub Pages. Its configured public address is <a href="https://starstartlliu-design.github.io/myblog/"  class="external-link" target="_blank" rel="noopener">Lu&rsquo;s Blog</a>.</p>
+<p>The local structure separates responsibilities:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Location</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>hugo.toml</code></td>
+					<td>Site title, theme, base URL, navigation, and Markdown settings</td>
+			</tr>
+			<tr>
+					<td><code>content/posts/</code></td>
+					<td>Articles and coursework sections</td>
+			</tr>
+			<tr>
+					<td><code>themes/hugo-coder/</code></td>
+					<td>Theme, tracked as a Git submodule</td>
+			</tr>
+			<tr>
+					<td><code>layouts/</code></td>
+					<td>Local template overrides, including mathematics support</td>
+			</tr>
+			<tr>
+					<td><code>static/images/</code></td>
+					<td>Images copied into the generated site</td>
+			</tr>
+			<tr>
+					<td><code>public/</code></td>
+					<td>Generated HTML used by the deployment workflow</td>
+			</tr>
+	</tbody>
+</table>
+<p>The theme submodule is present in the initial repository commit of 29 September 2026. The site configuration selects hugo-coder and includes the GitHub Pages project prefix, <code>/myblog/</code>, in its base URL. That prefix matters: a resource path that works at a domain root may fail below a project directory.</p>
+<p>I retain the existing Posts and HCI navigation. This laboratory report is an ordinary post, without another top-level menu entry. The <a href="/myblog/posts/hci-homework-1/" >first HCI homework article</a> and later coursework remain separate.</p>
+<h3 id="3-front-matter-a-persistent-parsing-problem">
+  3. Front Matter: A Persistent Parsing Problem
+  <a class="heading-link" href="#3-front-matter-a-persistent-parsing-problem">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The first HCI article was prepared at <code>content/posts/hci-homework-1.md</code>. The initial troubleshooting account records this repeated diagnostic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>13:8: unexpected character U+005C &#39;\&#39;
+</span></span></code></pre></div><p>Another symptom was that metadata appeared as ordinary webpage text. These were different failures: a parser error prevents Hugo from reading a file, whereas visible metadata suggests that the intended header was not recognized as front matter.</p>
+<p>One early suspicion concerned the timestamp:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">2026-09-29T16:49:27+02:00</span>
+</span></span></code></pre></div><p>However, an unquoted offset date-time is valid TOML. Hugo&rsquo;s <a href="https://gohugo.io/content-management/front-matter/"  class="external-link" target="_blank" rel="noopener">front matter documentation</a> uses the same form, and a separate TOML parser accepted this timestamp during the review. I therefore cannot identify the timezone offset as the cause.</p>
+<p>The investigation focused on the opening and closing delimiters, the metadata syntax, and the boundary between header and body. TOML uses <code>+++</code> and equals signs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;HCI Homework 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#ae81ff">2026-09-29</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">draft</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><p>YAML instead uses <code>---</code> and colon-separated fields:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;HCI Homework 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2026-09-29</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>A clean article file with recognizable front matter, followed by inspection of the generated page, resolved the setup problem. The available record does not preserve the exact file-generation command or the final character-level correction.</p>
+<h4 id="what-can-be-recovered-from-git">
+  What Can Be Recovered from Git
+  <a class="heading-link" href="#what-can-be-recovered-from-git">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The earliest committed Homework 1 file, commit <code>716fbac</code>, already has a delimited TOML header. At line 13 it contains an escaped Markdown heading, <code>\# Lecture 1: Affordances</code>. The later commit of 1 October, <code>e44ab94</code>, contains a clean header and an ordinary Markdown heading. The present file builds correctly.</p>
+<p>This is useful evidence, but it is not a complete reconstruction of the failure. The escaped heading is in the body; its presence does not prove that it caused the reported TOML error. Neither the original failing file nor the complete parser context was preserved in the available history. The metadata-as-body symptom comes from the troubleshooting account, rather than a committed failing version. I therefore do not present the timestamp, the escaped heading, or a guessed delimiter edit as a confirmed root cause.</p>
+<p>The lesson was to distinguish a suspicious line from a demonstrated cause, and to inspect both terminal diagnostics and the rendered webpage.</p>
+<h3 id="4-preview-mathematics-and-deployment">
+  4. Preview, Mathematics, and Deployment
+  <a class="heading-link" href="#4-preview-mathematics-and-deployment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A local development server provides a preview before publication:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>The current GitHub Pages workflow checks out the repository, uploads <code>public/</code>, and deploys that artifact. It does <strong>not</strong> run Hugo itself. Site generation and deployment are therefore separate steps: generated HTML must be prepared before the workflow can publish it. The Pages workflow was introduced on 29 September, and the subsequent coursework commits show the blog being reused.</p>
+<p>For equations, I reused the existing Homework 2 solution. Goldmark preserves mathematics delimiters, and a page-level <code>math = true</code> flag enables the existing KaTeX partial. This report did not require a new global mathematics configuration. Its images occupy a separate static directory, and their URLs include the project prefix.</p>
+<p>I checked this article through a local build and browser preview. This preparation did not trigger a deployment.</p>
+<h3 id="5-hugo-setup-results">
+  5. Hugo Setup Results
+  <a class="heading-link" href="#5-hugo-setup-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The Hugo activity established a functional structure for academic writing and a configured GitHub Pages deployment route. Its main lesson was that source files, parsing, browser rendering, and deployment require separate checks. A successful build alone does not establish that an image or equation is visible.</p>
+<p>The new laboratory article follows the existing site style and leaves the homework articles intact. It also avoids duplicating coursework entries in the top navigation.</p>
+<h2 id="part-ii--unity-ml-agents-reinforcement-learning-experiment">
+  Part II — Unity ML-Agents Reinforcement Learning Experiment
+  <a class="heading-link" href="#part-ii--unity-ml-agents-reinforcement-learning-experiment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="6-objective">
+  6. Objective
+  <a class="heading-link" href="#6-objective">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The objective of the second activity was to explore reinforcement learning through Unity ML-Agents and extend the basic framework to a new interactive situation.</p>
+<p>The selected task was <strong>Moving Target Challenge</strong>.</p>
+<p>In this environment, a spherical agent must learn to pursue a moving target inside a bounded arena.</p>
+<p>Unlike a stationary-target task, the target continuously changes position. The agent must therefore learn to react to both its own movement and the target&rsquo;s motion.</p>
+<p>The experiment involved environment design, agent implementation, reward definition, PPO training, and independent performance evaluation.</p>
+<h3 id="7-development-environment">
+  7. Development Environment
+  <a class="heading-link" href="#7-development-environment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The experiment used the following software:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Component</th>
+					<th>Version or configuration</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Unity Editor</td>
+					<td>6.0 LTS, 6000.0.85f2</td>
+			</tr>
+			<tr>
+					<td>Rendering pipeline</td>
+					<td>Universal Render Pipeline</td>
+			</tr>
+			<tr>
+					<td>Unity ML-Agents</td>
+					<td>4.1.0</td>
+			</tr>
+			<tr>
+					<td>Python</td>
+					<td>3.10.12</td>
+			</tr>
+			<tr>
+					<td>Python ML-Agents</td>
+					<td>1.2.0.dev0</td>
+			</tr>
+			<tr>
+					<td>PyTorch</td>
+					<td>2.8.0+cpu</td>
+			</tr>
+			<tr>
+					<td>Reinforcement learning algorithm</td>
+					<td>PPO</td>
+			</tr>
+			<tr>
+					<td>NumPy / Protobuf / ONNX</td>
+					<td>1.23.5 / 3.20.3 / 1.15.0</td>
+			</tr>
+			<tr>
+					<td>Model export format</td>
+					<td>ONNX</td>
+			</tr>
+	</tbody>
+</table>
+<p>The Unity package and Python environment were checked for compatibility before training.</p>
+<p>Both sides used ML-Agents communication protocol version 1.5.0.</p>
+<h3 id="8-problems-encountered-during-environment-setup">
+  8. Problems Encountered During Environment Setup
+  <a class="heading-link" href="#8-problems-encountered-during-environment-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="81-incomplete-unity-installation">
+  8.1 Incomplete Unity Installation
+  <a class="heading-link" href="#81-incomplete-unity-installation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>An earlier Unity 6000.6.6f1 installation was incomplete: a substantial Data directory remained, but the Editor executable was missing. Its registry entry also pointed to an unavailable C: drive path. I stopped treating the installation record as proof that the Editor was usable and selected Unity 6.0 LTS instead.</p>
+<p>The replacement executable was verified at:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>D:\HCI_Lab1\UnityEditor\6000.0.85f2\Editor\Unity.exe
+</span></span></code></pre></div><p>Its product version was 6000.0.85f2, its digital signature verified as Unity Technologies SF, and the official <code>-version</code> command returned the expected version with exit code 0. Core libraries, Mono, Package Manager, and Windows build support were also checked. The version command did not by itself establish GUI or license readiness; these were separate checks before project development.</p>
+<p>The final Editor and experiment files are on D:. The old C: drive download directory was later found to be empty, but the exact cleanup operation was not recorded. I do not attribute that cleanup to the earlier deletion attempt, which failed with an access-denied error, or claim that the old D: drive residual installation was removed.</p>
+<p>The new installation supported the Universal 3D project named <code>MovingTargetChallenge</code>. This resolved the missing-Editor problem without relying on the incomplete installation.</p>
+<h4 id="82-python-and-unity-package-compatibility">
+  8.2 Python and Unity Package Compatibility
+  <a class="heading-link" href="#82-python-and-unity-package-compatibility">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><strong>Problem</strong></p>
+<p>Unity ML-Agents contains separate Unity and Python components. Their version numbers are not necessarily identical, which can make compatibility verification confusing.</p>
+<p>The Unity package version was 4.1.0, while the corresponding Python package reported version 1.2.0.dev0.</p>
+<p>Simply comparing these two version strings was insufficient. I checked the official release/4.1.0 package definitions and Python source pinned to commit <code>4cd1badf62d9663fcab12fc278b2dab4d3c9209e</code>. That source declares Unity package 4.1.0 and Python packages 1.2.0.dev0; the Unity package requires Editor 6000.0 or later.</p>
+<p><strong>Solution</strong></p>
+<p>The Python environment was isolated at <code>D:\HCI_Lab1\mlagents-env</code>, rather than forcing the required versions into the existing Python environments.</p>
+<p>The Unity package was installed through the official Unity Package Manager registry.</p>
+<p>Compatibility was checked using the package definitions, dependency versions, and communication protocol.</p>
+<p>The Python environment was also tested for successful imports and CPU computation; <code>pip check</code> found no broken requirements.</p>
+<p><strong>Result</strong></p>
+<p>The Unity package was resolved successfully, and the project compiled with:</p>
+<ul>
+<li>0 C# errors.</li>
+<li>0 C# warnings.</li>
+</ul>
+<p>The required ML-Agents classes, including <code>Agent</code>, <code>BehaviorParameters</code>, <code>VectorSensor</code>, and <code>ActionBuffers</code>, were available.</p>
+<p>Actual Unity–Python communication was subsequently verified during the training stage.</p>
+<h3 id="9-moving-target-challenge-environment">
+  9. Moving Target Challenge Environment
+  <a class="heading-link" href="#9-moving-target-challenge-environment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="91-scene-design">
+  9.1 Scene Design
+  <a class="heading-link" href="#91-scene-design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<figure><img src="/myblog/images/hci-lab1/scene-overview-rendered.png"
+			alt="Actual Unity scene with a blue spherical agent, red target, and bounded arena"><figcaption>
+			<p>Figure 1. The actual Moving Target Challenge scene, captured through URP rendering. The visible borders mark the bounded arena.</p>
+		</figcaption>
+</figure>
+
+<p>The environment consists of a square arena, a blue spherical agent, and a red moving target.</p>
+<p>The arena has visible boundaries, a ground plane, lighting, and a camera. It is saved separately as <code>Assets/Scenes/MovingTargetChallenge.unity</code>; SampleScene is preserved. A repeatable Editor generator creates the scene and URP materials.</p>
+<p>The target has a kinematic Rigidbody and a trigger collider. It moves at constant speed between reflections; at a boundary, the relevant velocity component reverses while preserving the remaining displacement.</p>
+<p>At the beginning of each episode, the agent and target are assigned new positions, with a minimum separation to avoid immediate capture. The agent&rsquo;s linear and angular velocities are cleared, and the target receives a new direction.</p>
+<p>The main parameters were:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Parameter</th>
+					<th style="text-align: right">Value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Arena size</td>
+					<td style="text-align: right">16 × 16</td>
+			</tr>
+			<tr>
+					<td>Agent position limit</td>
+					<td style="text-align: right">±7.5</td>
+			</tr>
+			<tr>
+					<td>Target position limit</td>
+					<td style="text-align: right">±7.4</td>
+			</tr>
+			<tr>
+					<td>Agent acceleration</td>
+					<td style="text-align: right">18</td>
+			</tr>
+			<tr>
+					<td>Agent maximum speed</td>
+					<td style="text-align: right">6</td>
+			</tr>
+			<tr>
+					<td>Target speed</td>
+					<td style="text-align: right">1.5</td>
+			</tr>
+			<tr>
+					<td>Minimum initial separation</td>
+					<td style="text-align: right">4</td>
+			</tr>
+			<tr>
+					<td>Capture distance</td>
+					<td style="text-align: right">0.95</td>
+			</tr>
+			<tr>
+					<td>Physics timestep</td>
+					<td style="text-align: right">0.02 s</td>
+			</tr>
+			<tr>
+					<td>Maximum episode length</td>
+					<td style="text-align: right">2,000 physics steps, approximately 40 simulated seconds</td>
+			</tr>
+	</tbody>
+</table>
+<h4 id="92-observation-space">
+  9.2 Observation Space
+  <a class="heading-link" href="#92-observation-space">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The agent receives eight continuous observations:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Observation</th>
+					<th style="text-align: right">Dimensions</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Agent horizontal position</td>
+					<td style="text-align: right">2</td>
+			</tr>
+			<tr>
+					<td>Relative target position</td>
+					<td style="text-align: right">2</td>
+			</tr>
+			<tr>
+					<td>Agent horizontal velocity</td>
+					<td style="text-align: right">2</td>
+			</tr>
+			<tr>
+					<td>Target horizontal velocity</td>
+					<td style="text-align: right">2</td>
+			</tr>
+			<tr>
+					<td><strong>Total</strong></td>
+					<td style="text-align: right"><strong>8</strong></td>
+			</tr>
+	</tbody>
+</table>
+<p>The observations are normalized to the range [-1, 1].</p>
+<p>The agent&rsquo;s own position provides information about its proximity to the arena boundaries.</p>
+<p>Relative target position and target velocity provide information relevant to pursuit.</p>
+<h4 id="93-action-space">
+  9.3 Action Space
+  <a class="heading-link" href="#93-action-space">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The agent uses two continuous actions to control movement along the horizontal X and Z axes.</p>
+<p>The combined horizontal action magnitude is limited to one before the velocity update. The agent Rigidbody is constrained to horizontal movement, and the implementation caps its maximum speed.</p>
+<p>A Decision Requester requests a new decision every five physics steps, with the selected action repeated between decisions. At a 0.02-second physics timestep, this corresponds nominally to a new decision every 0.1 simulated seconds.</p>
+<p>A keyboard-based heuristic controller was also implemented for manual testing.</p>
+<h4 id="94-reward-function">
+  9.4 Reward Function
+  <a class="heading-link" href="#94-reward-function">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The reward mechanism was designed to encourage the agent to approach the target while discouraging inefficient movement and boundary violations.</p>
+<p>The distance-based reward was defined as:</p>
+\[
+r_{\mathrm{distance}}=0.02(d_{t-1}-d_t)
+\]<p>where \(d_t\) is the distance between the agent and target at the current step.</p>
+<p>Additional rewards and penalties were:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Event</th>
+					<th style="text-align: right">Reward</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Approaching the target</td>
+					<td style="text-align: right">Positive distance-change reward</td>
+			</tr>
+			<tr>
+					<td>Moving away from the target</td>
+					<td style="text-align: right">Negative distance-change reward</td>
+			</tr>
+			<tr>
+					<td>Each physics step</td>
+					<td style="text-align: right">−0.0005</td>
+			</tr>
+			<tr>
+					<td>Capturing the target</td>
+					<td style="text-align: right">+1</td>
+			</tr>
+			<tr>
+					<td>Leaving the arena</td>
+					<td style="text-align: right">−1</td>
+			</tr>
+	</tbody>
+</table>
+<p>Capturing the target or leaving the arena ends the current episode. The 2,000-step limit truncates an episode that has not otherwise ended. Capture is defined by horizontal distance, not physical contact.</p>
+<p>Reward is accounted for once per physics step, not only when a new decision is requested. The previous-distance value is reset at episode initialization so that reset jumps are excluded.</p>
+<p>The complete reward can be written as:</p>
+\[
+r_t=0.02(d_{t-1}-d_t)-0.0005+\mathbf{1}_{\mathrm{capture}}-\mathbf{1}_{\mathrm{out}}.
+\]<p>An approach-and-retreat check found no net positive undiscounted distance-cycle reward. This rules out one simple exploit; it does not prove that every undesirable strategy is excluded.</p>
+<h3 id="10-implementation-and-testing-problems">
+  10. Implementation and Testing Problems
+  <a class="heading-link" href="#10-implementation-and-testing-problems">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="101-verifying-the-generated-scene">
+  10.1 Verifying the Generated Scene
+  <a class="heading-link" href="#101-verifying-the-generated-scene">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><strong>Problem</strong></p>
+<p>A Unity scene can compile successfully while still containing incorrect component references, unsuitable physics settings, or runtime problems.</p>
+<p>Therefore, successful compilation alone was not considered sufficient.</p>
+<p><strong>Solution</strong></p>
+<p>The scene components and scripts were checked before runtime testing.</p>
+<p>The checks included the observation dimensions, action dimensions, component references, target movement, episode resets, and reward calculations.</p>
+<p>The scene was also generated twice to check that repeated generation did not create duplicate objects.</p>
+<p><strong>Results</strong></p>
+<p>The Editor validation completed successfully.</p>
+<p>Specific tests included:</p>
+<ul>
+<li>200 episode resets, with a minimum observed spawn separation of approximately 4.038.</li>
+<li>2,000 target movement steps without exceeding the target boundary.</li>
+<li>Verification of movement speed limits.</li>
+<li>Verification of reward behavior when approaching or moving away from the target.</li>
+<li>Verification that returning to a previous distance did not produce a net positive distance-change reward.</li>
+</ul>
+<p>These Editor checks established structural and selected logic consistency, not complete runtime correctness. C# compilation, Editor validation, manual Play-mode testing, communication testing, and model evaluation were treated as separate stages.</p>
+<h4 id="102-testing-in-unity-play-mode">
+  10.2 Testing in Unity Play Mode
+  <a class="heading-link" href="#102-testing-in-unity-play-mode">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><strong>Problem</strong></p>
+<p>Editor validation cannot fully establish whether the environment behaves correctly during gameplay.</p>
+<p>In particular, keyboard input and real-time movement require runtime testing.</p>
+<p><strong>Solution</strong></p>
+<p>The Agent&rsquo;s Behavior Type was temporarily changed to <code>Heuristic Only</code>.</p>
+<p>The scene was launched in Unity Play mode, and the Game view was used to test keyboard control.</p>
+<p>The agent could be controlled using WASD or the arrow keys.</p>
+<p><strong>Result</strong></p>
+<p>The Game view displayed the arena, agent, and target correctly, and keyboard-controlled movement worked.</p>
+<p>The initial Play-mode test confirmed basic movement functionality. More extensive episode behavior was subsequently examined during communication and evaluation tests.</p>
+<h4 id="103-trainer-connection-message">
+  10.3 Trainer Connection Message
+  <a class="heading-link" href="#103-trainer-connection-message">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><strong>Problem</strong></p>
+<p>During the initial Play-mode test, Unity displayed a message indicating that it could not connect to the trainer on port 5004.</p>
+<p>This occurred before the Python trainer was running.</p>
+<p><strong>Solution</strong></p>
+<p>The message was distinguished from a C# compilation failure.</p>
+<p>The environment was first tested through heuristic control. The actual Python trainer connection was then tested separately using the ML-Agents communication interface.</p>
+<p><strong>Result</strong></p>
+<p>The Unity environment and Python process successfully exchanged 1,000 interactions.</p>
+<p>The communication test recorded:</p>
+<ul>
+<li>Behavior name: <code>MovingTargetAgent?team=0</code></li>
+<li>Observation size: 8</li>
+<li>Continuous action size: 2</li>
+<li>Communication protocol: 1.5.0</li>
+<li>Completed episodes: 24</li>
+</ul>
+<p>The transmitted observations and rewards contained valid finite numerical values. The probe emitted warnings because its diagnostic client had not registered a statistics side channel; core interaction passed, and the training client registered that channel normally.</p>
+<p>This confirmed that Unity and Python could communicate correctly.</p>
+<h4 id="104-building-the-player-and-correcting-black-screenshots">
+  10.4 Building the Player and Correcting Black Screenshots
+  <a class="heading-link" href="#104-building-the-player-and-correcting-black-screenshots">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Windows x64 Mono build support was already available, so no additional large build-module download was needed. A measurement script initially referred to a nonexistent <code>InferenceDevice.CPU</code> enum value. Inspection of the installed 4.1.0 API identified <code>InferenceDevice.Burst</code> as the CPU backend. Correcting that reference allowed the standalone Player build to succeed.</p>
+<p>The successful Player build reported 186 warnings, including Sentis shader performance hints, but no build errors. These warnings are distinct from the earlier C# compilation failure.</p>
+<p>The first automated <code>ScreenCapture</code> call in non-interactive batch mode produced an entirely black PNG. I excluded it from the report. The replacement used an explicit URP single-camera render request, rendered into a RenderTexture, read the pixels, and saved a PNG. The resulting images were visually inspected. They are actual Unity renders, not illustrative substitutes.</p>
+<h3 id="11-ppo-training">
+  11. PPO Training
+  <a class="heading-link" href="#11-ppo-training">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="111-training-configuration">
+  11.1 Training Configuration
+  <a class="heading-link" href="#111-training-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Proximal Policy Optimization (PPO) was selected as the reinforcement learning algorithm.</p>
+<p>The policy network used two hidden layers with 128 units each.</p>
+<p>The main hyperparameters were:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Hyperparameter</th>
+					<th style="text-align: right">Value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Algorithm</td>
+					<td style="text-align: right">PPO</td>
+			</tr>
+			<tr>
+					<td>Batch size</td>
+					<td style="text-align: right">1,024</td>
+			</tr>
+			<tr>
+					<td>Buffer size</td>
+					<td style="text-align: right">10,240</td>
+			</tr>
+			<tr>
+					<td>Learning rate</td>
+					<td style="text-align: right">0.0003</td>
+			</tr>
+			<tr>
+					<td>Beta</td>
+					<td style="text-align: right">0.005</td>
+			</tr>
+			<tr>
+					<td>Epsilon</td>
+					<td style="text-align: right">0.2</td>
+			</tr>
+			<tr>
+					<td>Lambda</td>
+					<td style="text-align: right">0.95</td>
+			</tr>
+			<tr>
+					<td>Epochs per update</td>
+					<td style="text-align: right">3</td>
+			</tr>
+			<tr>
+					<td>Hidden units</td>
+					<td style="text-align: right">128</td>
+			</tr>
+			<tr>
+					<td>Hidden layers</td>
+					<td style="text-align: right">2</td>
+			</tr>
+			<tr>
+					<td>Gamma</td>
+					<td style="text-align: right">0.99</td>
+			</tr>
+			<tr>
+					<td>Time horizon</td>
+					<td style="text-align: right">64</td>
+			</tr>
+			<tr>
+					<td>Summary frequency</td>
+					<td style="text-align: right">5,000 steps</td>
+			</tr>
+	</tbody>
+</table>
+<p>Training was performed on the CPU. Learned input normalization was disabled because the eight observations were already normalized explicitly. The learning-rate schedule was linear; checkpoints were scheduled every 20,000 steps, with five retained. The training seed was 42, and the environment time scale was 20.</p>
+<p>The standalone Player avoided repeated Editor launches and manual Play clicks. A wrapper supplied the following trainer arguments, recorded elapsed time and exit status, and imposed a 45-minute safe-interruption limit. Here <code>&lt;experiment&gt;</code> denotes the output directory for this run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>python -m mlagents.trainers.learn TrainingConfigs/20261107_210808/ppo.yaml --env <span style="color:#e6db74">&#34;&lt;experiment&gt;/build/MovingTargetChallenge.exe&#34;</span> --run-id formal_20261107_210808 --results-dir <span style="color:#e6db74">&#34;&lt;experiment&gt;/training&#34;</span> --seed <span style="color:#ae81ff">42</span> --torch-device cpu --no-graphics --time-scale <span style="color:#ae81ff">20</span> --num-envs <span style="color:#ae81ff">1</span> --base-port <span style="color:#ae81ff">5025</span> --timeout-wait <span style="color:#ae81ff">90</span> --env-args --lab-episode-log <span style="color:#e6db74">&#34;&lt;experiment&gt;/logs/formal-episodes.jsonl&#34;</span>
+</span></span></code></pre></div><h4 id="112-preliminary-training">
+  11.2 Preliminary Training
+  <a class="heading-link" href="#112-preliminary-training">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>A short training run was performed before the main experiment.</p>
+<p>The purpose was to verify that the environment could execute training steps and that PPO updates could occur successfully.</p>
+<p>The preliminary run used batch size 256 and buffer size 2,048 so that PPO updates would occur during the preflight. It completed 10,017 steps in 41.765 seconds, approximately 42 seconds, with exit code 0. Finite loss records and a valid ONNX export were produced.</p>
+<p>Only after these checks passed did the main training run begin, with a separate run ID and output directory. The preflight model was not used to initialize the formal policy.</p>
+<h4 id="113-main-training-results">
+  11.3 Main Training Results
+  <a class="heading-link" href="#113-main-training-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The formal training run completed 100,024 steps in 316.125 seconds, approximately 5 minutes and 16 seconds. The small overshoot beyond the requested 100,000 steps reflects the trainer&rsquo;s trajectory-processing granularity. The 45-minute limit was not reached.</p>
+<p>The process exited successfully, and the trained model was exported to ONNX format.</p>
+<p>The following results were recorded:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Metric</th>
+					<th style="text-align: right">Result</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Total training steps</td>
+					<td style="text-align: right">100,024</td>
+			</tr>
+			<tr>
+					<td>Training duration</td>
+					<td style="text-align: right">5 min 16 s</td>
+			</tr>
+			<tr>
+					<td>First reporting window mean reward</td>
+					<td style="text-align: right">−0.899</td>
+			</tr>
+			<tr>
+					<td>Last reporting window mean reward</td>
+					<td style="text-align: right">+0.547</td>
+			</tr>
+			<tr>
+					<td>Overall mean reward across completed episodes</td>
+					<td style="text-align: right">−0.326</td>
+			</tr>
+			<tr>
+					<td>First window mean episode length</td>
+					<td style="text-align: right">67.62 decision steps</td>
+			</tr>
+			<tr>
+					<td>Last window mean episode length</td>
+					<td style="text-align: right">200.88 decision steps</td>
+			</tr>
+	</tbody>
+</table>
+<figure><img src="/myblog/images/hci-lab1/ppo-mean-reward.png"
+			alt="Actual TensorBoard mean episode reward during formal PPO training"><figcaption>
+			<p>Figure 2. Reporting-window mean reward extracted from the actual TensorBoard log. Reward improved overall, but the later windows still fluctuated.</p>
+		</figcaption>
+</figure>
+
+<p>The mean reward increased by approximately 1.446 between the first and last reporting windows.</p>
+<p>The first four reward windows averaged approximately -0.857, compared with +0.304 for the last four. This supports overall progress without relying only on the most favorable final point. The negative full-run mean includes failures while the policy was still learning; it is not the final model&rsquo;s independent test score.</p>
+<p>However, the reward curve still showed fluctuations, and the longer episode duration did not necessarily mean faster target capture.</p>
+<p>A longer episode could also indicate that the agent had learned to avoid leaving the arena without consistently reaching the target.</p>
+<figure><img src="/myblog/images/hci-lab1/ppo-episode-length.png"
+			alt="Actual TensorBoard mean episode length in decision steps"><figcaption>
+			<p>Figure 3. Episode length in decision steps. Longer episodes may indicate fewer early boundary failures rather than faster target capture.</p>
+		</figcaption>
+</figure>
+
+<p>The training log recorded 679 completed episodes: 302 captures, 312 boundary failures, and 65 timeouts. These totals mix early and late policies. They are not a substitute for testing the exported model independently.</p>
+<p>Therefore, an independent evaluation was necessary.</p>
+<h3 id="12-independent-evaluation">
+  12. Independent Evaluation
+  <a class="heading-link" href="#12-independent-evaluation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="121-evaluation-method">
+  12.1 Evaluation Method
+  <a class="heading-link" href="#121-evaluation-method">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The final <code>MovingTargetAgent-100024.onnx</code> file passed the ONNX checker and was loaded in a separate evaluation Player for deterministic CPU/Burst inference.</p>
+<p>Four control strategies were compared:</p>
+<ol>
+<li>Random actions.</li>
+<li>Remaining stationary.</li>
+<li>A manually designed pursuit controller.</li>
+<li>The trained PPO policy.</li>
+</ol>
+<p>Each strategy was evaluated over 100 episodes using test seed 20261107, separate from training seed 42. The arena, movement rules, spawn separation, capture distance, and episode limit were unchanged. Evaluation used time scale 50, but capture durations are simulated seconds derived from physics steps, not wall-clock execution time.</p>
+<p>The random controller sampled horizontal actions, the stationary controller supplied zeros, and the handwritten pursuit controller used relative position and current velocity to steer toward the target. The last controller is a reference solution, not a learned policy.</p>
+<p>Capture rate and average capture time were recorded.</p>
+<h4 id="122-evaluation-results">
+  12.2 Evaluation Results
+  <a class="heading-link" href="#122-evaluation-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<table>
+	<thead>
+			<tr>
+					<th>Strategy</th>
+					<th style="text-align: right">Capture rate</th>
+					<th style="text-align: right">Mean capture time for successful episodes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Random actions</td>
+					<td style="text-align: right">7%</td>
+					<td style="text-align: right">4.07 s</td>
+			</tr>
+			<tr>
+					<td>Stationary</td>
+					<td style="text-align: right">33%</td>
+					<td style="text-align: right">20.68 s</td>
+			</tr>
+			<tr>
+					<td>Handwritten pursuit controller</td>
+					<td style="text-align: right">100%</td>
+					<td style="text-align: right">1.79 s</td>
+			</tr>
+			<tr>
+					<td>Trained PPO</td>
+					<td style="text-align: right">48%</td>
+					<td style="text-align: right">18.81 s</td>
+			</tr>
+	</tbody>
+</table>
+<figure><img src="/myblog/images/hci-lab1/independent-capture-rate.png"
+			alt="Capture rates of four strategies tested over 100 independent episodes each"><figcaption>
+			<p>Figure 4. Independent evaluation. PPO exceeded the random and stationary baselines in this test, but remained far below handwritten pursuit.</p>
+		</figcaption>
+</figure>
+
+<p>The trained PPO policy achieved a capture rate of 48%.</p>
+<p>This was higher than both the random-action baseline and the stationary baseline.</p>
+<p>However, it was substantially worse than the handwritten pursuit controller, which achieved a 100% capture rate and much shorter capture times.</p>
+<p>Of the 100 PPO evaluation episodes, 52 ended because of the time limit rather than target capture. None ended because the agent left the arena.</p>
+<p><strong>The capture-time averages include successful episodes only and must be interpreted together with capture rate.</strong> Random actions appear fast only among seven successful episodes; the other 93 episodes ended outside the arena. That conditional average does not make random control a better pursuit strategy.</p>
+<p>The PPO model&rsquo;s mean reward over independent test episodes was -0.147. This is different from the final training-window mean of +0.547: training sampled exploratory actions, evaluation was deterministic, and the test seed differed. The two metrics cannot be used interchangeably.</p>
+<figure><img src="/myblog/images/hci-lab1/trained-agent-runtime.png"
+			alt="Actual Unity frame after loading and running the exported PPO ONNX model"><figcaption>
+			<p>Figure 5. A real runtime frame after loading the trained ONNX model. A single screenshot confirms rendering and execution, not pursuit quality.</p>
+		</figcaption>
+</figure>
+
+<h3 id="13-discussion-why-was-the-learned-policy-not-more-effective">
+  13. Discussion: Why Was the Learned Policy Not More Effective?
+  <a class="heading-link" href="#13-discussion-why-was-the-learned-policy-not-more-effective">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="131-improvement-in-reward-does-not-guarantee-efficient-pursuit">
+  13.1 Improvement in Reward Does Not Guarantee Efficient Pursuit
+  <a class="heading-link" href="#131-improvement-in-reward-does-not-guarantee-efficient-pursuit">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The PPO policy demonstrated improvement in mean training reward.</p>
+<p>However, its independent capture rate remained below 50%.</p>
+<p>This difference illustrates an important characteristic of reinforcement learning: maximizing the defined reward does not always produce the behavior that a human observer considers most effective.</p>
+<p>The observed outcome is consistent with reducing penalties without fully solving the intended task. It does not, by itself, prove a particular reward exploit.</p>
+<h4 id="132-conservative-movement-as-a-possible-explanation">
+  13.2 Conservative Movement as a Possible Explanation
+  <a class="heading-link" href="#132-conservative-movement-as-a-possible-explanation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The trained agent completed all evaluation episodes without crossing the arena boundary.</p>
+<p>This suggests that it learned to avoid at least one major source of negative reward.</p>
+<p>At the same time, its relatively low capture rate and long successful capture times suggest that it did not develop an efficient pursuit strategy.</p>
+<p>One possible explanation is that the policy became conservative, prioritizing survival inside the arena over aggressive pursuit.</p>
+<p>This interpretation is consistent with the evaluation results, but further trajectory analysis would be needed to confirm the exact movement pattern.</p>
+<h4 id="133-why-did-the-stationary-baseline-capture-33">
+  13.3 Why Did the Stationary Baseline Capture 33%?
+  <a class="heading-link" href="#133-why-did-the-stationary-baseline-capture-33">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The stationary baseline&rsquo;s 33 captures are important because success can occur without active pursuit. The implementation supplies a concrete mechanism: the stationary controller returns zero actions, episode reset clears the agent&rsquo;s velocity, gravity is disabled, and the target collider is a trigger rather than an object that pushes the agent. Meanwhile, the target keeps moving at 1.5 units per second and reflecting inside the arena.</p>
+<p>Capture depends only on relative distance. If the target enters the 0.95-unit capture region around the stationary agent, the episode succeeds regardless of which object closed the gap. The minimum initial separation prevents immediate capture, but does not prevent a later passive capture. Over a full 40-second episode the target can travel approximately 60 units along its reflected path.</p>
+<p>The logs establish 33 captures and 67 timeouts, with a mean successful capture time of 20.68 simulated seconds. The code establishes how passive capture is possible. Neither establishes that every target path will reach every stationary position or that 33% is a general probability. No ablation study quantified the separate effects of arena geometry, direction, capture radius, and time limit.</p>
+<p>The same observation matters for reward interpretation: distance can decrease because the target approaches, even if the agent contributes no pursuit action. Comparing only against random actions would therefore exaggerate the evidence for purposeful tracking. The stationary baseline provides a more informative reference.</p>
+<h4 id="134-limitations-of-the-experiment">
+  13.4 Limitations of the Experiment
+  <a class="heading-link" href="#134-limitations-of-the-experiment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The experiment has several limitations.</p>
+<p>First, the policy was trained using one training seed and evaluated using one independent test seed. Additional runs would be necessary to assess reproducibility. The 100-episode comparison does not establish cross-seed stability or statistically robust superiority over the stationary baseline.</p>
+<p>Second, the initial budget allowed roughly ten buffer-sized collection cycles. That may have restricted learning, but a longer run is not automatically the correct remedy.</p>
+<p>Third, the evaluation did not include detailed trajectory analysis, so the precise reasons for inefficient pursuit remain uncertain.</p>
+<p>Finally, reward design and action-selection differences may contribute to the gap between training and testing. Revising the reward would be a new experiment; the current results do not identify a proven single cause of the limited performance.</p>
+<p>Possible future improvements include analyzing action trajectories, revising the reward structure, testing additional random seeds, and comparing alternative PPO configurations.</p>
+<p>These improvements were not performed in the present experiment.</p>
+<h3 id="14-technical-outcomes-and-lessons-learned">
+  14. Technical Outcomes and Lessons Learned
+  <a class="heading-link" href="#14-technical-outcomes-and-lessons-learned">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This experiment provided practical experience in several areas.</p>
+<p><strong>Unity environment development:</strong> A custom interactive environment was created using C# scripts, physics components, and ML-Agents behavior configuration.</p>
+<p><strong>System integration:</strong> The Unity Editor, Unity ML-Agents package, Python environment, and training process were configured and tested together.</p>
+<p><strong>Debugging and validation:</strong> Compilation, Editor validation, runtime testing, communication testing, and independent evaluation were treated as separate verification stages.</p>
+<p><strong>Reinforcement learning:</strong> The experiment demonstrated how observation design, action spaces, reward functions, and PPO training influence learned behavior.</p>
+<p><strong>Experimental evaluation:</strong> Comparing the trained model against multiple baselines revealed limitations that were not apparent from the training reward curve alone.</p>
+<p>The most important lesson was that a successful training process and an improving reward curve do not necessarily imply that the agent has learned an efficient solution.</p>
+<hr>
+<h2 id="15-overall-conclusion">
+  15. Overall Conclusion
+  <a class="heading-link" href="#15-overall-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>HCI Lab 1 provided experience with two different but complementary technical workflows.</p>
+<p>The Hugo activity focused on website development, content organization, deployment, and troubleshooting configuration errors. The final result was a functional academic blog suitable for publishing HCI coursework.</p>
+<p>The Unity ML-Agents activity focused on interactive environment design, reinforcement learning, and experimental evaluation.</p>
+<p>The Moving Target Challenge environment was successfully implemented, and Unity–Python communication was verified.</p>
+<p>A PPO model was trained for 100,024 steps, exported to ONNX, and evaluated against three baseline strategies.</p>
+<p>The model showed measurable learning progress, with mean training reward increasing from −0.899 to +0.547 between the first and last reporting windows.</p>
+<p>Nevertheless, its independent capture rate of 48% showed that the learned behavior was not yet consistently effective.</p>
+<p>Overall, the laboratory demonstrated not only how to implement and test interactive systems, but also why careful debugging, appropriate baselines, and critical interpretation of experimental results are essential.</p>
+<p>The experiment achieved its implementation and training objectives while identifying clear limitations and directions for future improvement.</p>
+<h2 id="references-and-reproducibility">
+  References and Reproducibility
+  <a class="heading-link" href="#references-and-reproducibility">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><a href="https://gohugo.io/content-management/front-matter/"  class="external-link" target="_blank" rel="noopener">Hugo front matter documentation</a>.</li>
+<li><a href="https://github.com/Unity-Technologies/ml-agents/blob/release/4.1.0/com.unity.ml-agents/package.json"  class="external-link" target="_blank" rel="noopener">Official Unity ML-Agents 4.1.0 package definition</a>.</li>
+<li><a href="https://github.com/Unity-Technologies/ml-agents/blob/4cd1badf62d9663fcab12fc278b2dab4d3c9209e/ml-agents/mlagents/trainers/__init__.py"  class="external-link" target="_blank" rel="noopener">Pinned Python trainer version source</a>.</li>
+<li><a href="https://docs.unity.cn/6000.0/Documentation/Manual/urp/User-Render-Requests.html"  class="external-link" target="_blank" rel="noopener">Official Unity URP render-request documentation</a>.</li>
+</ul>
+<p>The source measurements are retained in <code>experiment_20261107_210808</code>: the communication probe, exact trainer arguments and exit status, TensorBoard scalar export, per-episode JSONL records, evaluation CSV, model checksum, and source/configuration snapshot. All figures above come from these measurements or actual Unity rendering. No illustrative replacement screenshots or invented training values were used.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector('.post-content') || document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Lu 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/myblog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
