@@ -6,12 +6,12 @@
 		<description>Recent content in Human-Computer Interaction on Lu&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
-
-
-
-
+		
+		
+		
+		
 			<lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0100</lastBuildDate>
-
+		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/categories/human-computer-interaction/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Beyond Conventional Interfaces: Chris Harrison’s Research on Sensing and Haptic Interaction</title>
@@ -61,6 +61,13 @@
 				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/</guid>
 				<description>&lt;h2 id=&#34;lecture-7--ideation&#34;&gt;&#xD;&#xA;  Lecture 7 — Ideation&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-7--ideation&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;  Concept 1 — AR Optical Learning Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR-based learning assistant helps students understand optical principles by overlaying virtual light rays, optical axes, focal points, and focal lengths onto real optical setups. As users change the object-to-lens distance, the system updates the ray diagram to illustrate image formation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;  Concept 2 — AR Indoor Navigation Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR indoor navigation assistant helps users find their way through unfamiliar buildings. After entering a destination, users see directional arrows, floor information, and classroom labels overlaid onto the real environment through their smartphone cameras.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>HCI Homework 4 — Smartphone Evolution, Ubiquitous Computing, and Future MR Applications</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-4/</link>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-4/</guid>
+				<description>&lt;h2 id=&#34;lecture-10-the-evolution-of-smartphone-shapes-and-their-future-development&#34;&gt;&#xD;&#xA;  Lecture 10: The Evolution of Smartphone Shapes and Their Future Development&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-10-the-evolution-of-smartphone-shapes-and-their-future-development&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;1-introduction&#34;&gt;&#xD;&#xA;  1. Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;The physical shape of mobile phones has changed significantly over the past few decades. From bulky devices with physical keyboards to modern smartphones with large touchscreens, these transformations have been driven by technological development, changing user needs, and improvements in human-computer interaction (HCI).&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>HCI Homework 1</title>
