@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Augmented Reality on Lu&#39;s Blog</title>
+		<link>https://starstartlliu-design.github.io/myblog/tags/augmented-reality/</link>
+		<description>Recent content in Augmented Reality on Lu&#39;s Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+
+
+
+
+			<lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+
+			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/augmented-reality/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/</link>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/</guid>
+				<description>&lt;h2 id=&#34;lecture-7--ideation&#34;&gt;&#xD;&#xA;  Lecture 7 — Ideation&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-7--ideation&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;  Concept 1 — AR Optical Learning Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR-based learning assistant helps students understand optical principles by overlaying virtual light rays, optical axes, focal points, and focal lengths onto real optical setups. As users change the object-to-lens distance, the system updates the ray diagram to illustrate image formation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;  Concept 2 — AR Indoor Navigation Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR indoor navigation assistant helps users find their way through unfamiliar buildings. After entering a destination, users see directional arrows, floor information, and classroom labels overlaid onto the real environment through their smartphone cameras.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

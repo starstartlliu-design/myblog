@@ -7,6 +7,8 @@ title: "HCI"
 - [HCI Homework 1]({{< relref "/posts/hci-homework-1" >}}): Affordances, Gestalt Laws, and Dark Design Patterns.
 - [HCI Homework 2]({{< relref "/posts/hci-homework-2" >}}): Lecture 4, Lecture 5, and Lecture 6.
 
+- [HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality]({{< relref "/posts/hci-homework-3" >}}): Lecture 7, Lecture 8, and Lecture 9. · November 1, 2026
+
 ## Laboratories
 
 - [HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment]({{< relref "/posts/hci-lab-1" >}}): Blog setup, the Moving Target Challenge, PPO training, and independent evaluation.

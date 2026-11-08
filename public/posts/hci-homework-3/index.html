@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality · Lu&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Lu">
+<meta name="description" content="Lecture 7–9: AR ideation, an interactive optical learning prototype, and qualitative user evaluation.">
+<meta name="keywords" content="">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality">
+	<meta name="twitter:description" content="Lecture 7–9: AR ideation, an interactive optical learning prototype, and qualitative user evaluation.">
+
+<meta property="og:url" content="https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/">
+	<meta property="og:site_name" content="Lu&#39;s Blog">
+	<meta property="og:title" content="HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality">
+	<meta property="og:description" content="Lecture 7–9: AR ideation, an interactive optical learning prototype, and qualitative user evaluation.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-11-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-11-01T00:00:00+00:00">
+		<meta property="article:tag" content="HCI">
+		<meta property="article:tag" content="Augmented Reality">
+
+
+
+
+<link rel="canonical" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/">
+
+
+<link rel="preload" href="/myblog/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/myblog/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/myblog/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+
+
+  <link rel="stylesheet" href="/myblog/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/myblog/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/myblog/css/homework.min.f5308cd878e0b0cbeab0074707035f1405774f988320f41eada412b8735bb544.css" integrity="sha256-9TCM2HjgsMvqsAdHBwNfFAV3T5iDIPQeraQSuHNbtUQ=" crossorigin="anonymous" media="screen" />
+
+
+
+
+    <link rel="stylesheet" href="/myblog/css/hci-lab3.min.01a9feed87b60529f3e0b1fe61dd34a03c909d25e4f07d2aa6c06ab4cafc56fe.css" integrity="sha256-Aan&#43;7Ye2BSnz4LH&#43;Yd00oDyQnSXk8H0qpsBqtMr8Vv4=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="https://starstartlliu-design.github.io/myblog/">
+      Lu&#39;s Blog
+    </a>
+
+
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+
+
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/">Posts</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/courses/hci/">HCI</a>
+            </li>
+
+
+
+      </ul>
+
+  </section>
+</nav>
+
+
+    <div class="content">
+
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/">
+              HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-11-01T00:00:00Z">
+                November 1, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              11-minute read
+            </span>
+          </div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/myblog/categories/human-computer-interaction/">Human-Computer Interaction</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/myblog/tags/hci/">HCI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/augmented-reality/">Augmented Reality</a>
+    </span></div>
+
+        </div>
+      </header>
+
+
+<details class="entry__toc toc" >
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lecture-7--ideation">Lecture 7 — Ideation</a>
+      <ul>
+        <li><a href="#concept-1--ar-optical-learning-assistant">Concept 1 — AR Optical Learning Assistant</a></li>
+        <li><a href="#concept-2--ar-indoor-navigation-assistant">Concept 2 — AR Indoor Navigation Assistant</a></li>
+        <li><a href="#concept-3--ar-real-time-communication-assistant">Concept 3 — AR Real-Time Communication Assistant</a></li>
+      </ul>
+    </li>
+    <li><a href="#lecture-8--interactive-prototype">Lecture 8 — Interactive Prototype</a>
+      <ul>
+        <li><a href="#1-introduction">1. Introduction</a></li>
+        <li><a href="#2-prototype-design">2. Prototype Design</a></li>
+        <li><a href="#3-interactive-features">3. Interactive Features</a></li>
+        <li><a href="#4-example-interaction">4. Example Interaction</a></li>
+        <li><a href="#5-why-this-is-an-ar-prototype">5. Why This Is an AR Prototype</a></li>
+        <li><a href="#6-prototype-limitations-and-future-improvements">6. Prototype Limitations and Future Improvements</a></li>
+        <li><a href="#7-conclusion">7. Conclusion</a></li>
+      </ul>
+    </li>
+    <li><a href="#lecture-9--user-evaluation">Lecture 9 — User Evaluation</a>
+      <ul>
+        <li><a href="#1-evaluation-objective">1. Evaluation Objective</a></li>
+        <li><a href="#2-evaluation-method">2. Evaluation Method</a></li>
+        <li><a href="#3-observations-and-user-feedback">3. Observations and User Feedback</a></li>
+        <li><a href="#4-critical-reflection">4. Critical Reflection</a></li>
+        <li><a href="#5-proposed-improvements">5. Proposed Improvements</a></li>
+        <li><a href="#6-conclusion">6. Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+
+
+      <div class="post-content">
+
+        <h2 id="lecture-7--ideation">
+  Lecture 7 — Ideation
+  <a class="heading-link" href="#lecture-7--ideation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="concept-1--ar-optical-learning-assistant">
+  Concept 1 — AR Optical Learning Assistant
+  <a class="heading-link" href="#concept-1--ar-optical-learning-assistant">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An AR-based learning assistant helps students understand optical principles by overlaying virtual light rays, optical axes, focal points, and focal lengths onto real optical setups. As users change the object-to-lens distance, the system updates the ray diagram to illustrate image formation.</p>
+<h3 id="concept-2--ar-indoor-navigation-assistant">
+  Concept 2 — AR Indoor Navigation Assistant
+  <a class="heading-link" href="#concept-2--ar-indoor-navigation-assistant">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An AR indoor navigation assistant helps users find their way through unfamiliar buildings. After entering a destination, users see directional arrows, floor information, and classroom labels overlaid onto the real environment through their smartphone cameras.</p>
+<h3 id="concept-3--ar-real-time-communication-assistant">
+  Concept 3 — AR Real-Time Communication Assistant
+  <a class="heading-link" href="#concept-3--ar-real-time-communication-assistant">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An AR real-time communication assistant supports face-to-face conversations across language barriers. Through AR glasses, users can see translated subtitles positioned near the speaker, allowing them to maintain eye contact while understanding the conversation. An optional captioning mode can also support users with hearing difficulties.</p>
+<figure style="margin:2rem 0;">
+  <a href="/myblog/images/hci-hw3/concept-sketches.png"><img src="/myblog/images/hci-hw3/concept-sketches.png" alt="Figure 1. Concept sketches for the optical learning, indoor navigation, and real-time communication assistants. Original bilingual annotations are preserved." loading="lazy" style="display:block;width:100%;height:auto;"></a>
+  <figcaption style="font-size:.9em;line-height:1.6;margin-top:.8rem;">Figure 1. Concept sketches for the optical learning, indoor navigation, and real-time communication assistants. Original bilingual annotations are preserved.</figcaption>
+</figure>
+
+<h2 id="lecture-8--interactive-prototype">
+  Lecture 8 — Interactive Prototype
+  <a class="heading-link" href="#lecture-8--interactive-prototype">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong><a href="/myblog/ar-optics/" >Launch Interactive AR Prototype</a></strong></p>
+<h3 id="1-introduction">
+  1. Introduction
+  <a class="heading-link" href="#1-introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For this assignment, I selected the AR Optical Learning Assistant from the three concepts proposed in Lecture 7 and developed an interactive prototype.</p>
+<p>The purpose of this application is to help students understand geometrical optics by displaying virtual optical information over a real-world experimental environment.</p>
+<p>In traditional optics education, students often learn about image formation through textbook diagrams and mathematical equations. However, it can be difficult to connect these abstract representations with physical optical experiments, especially because the paths of light rays are not normally visible.</p>
+<p>My proposed AR application addresses this problem by allowing students to visualize light rays, focal points, and image formation directly within their view of an optical experiment.</p>
+<h3 id="2-prototype-design">
+  2. Prototype Design
+  <a class="heading-link" href="#2-prototype-design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I developed a simulated AR prototype using HTML, CSS, and JavaScript.</p>
+<p>Instead of implementing a complete AR system with a camera and spatial tracking, I used an AI-generated, photorealistic optical laboratory scene as the background. Interactive virtual elements are overlaid on this scene to simulate what a user might see through AR glasses.</p>
+<p>The prototype includes three main components:</p>
+<ul>
+<li>Real-world scene simulation: An optical bench containing a convex lens, an object, and an image screen.</li>
+<li>AR visualization layer: Virtual light rays, focal points, an optical axis, and optical annotations displayed over the experimental scene.</li>
+<li>Interactive interface: Controls that allow users to modify the object distance, display or hide optical information, and reset the experiment.</li>
+</ul>
+<p>This approach allows users to experience the proposed interaction without requiring specialized AR hardware.</p>
+<h3 id="3-interactive-features">
+  3. Interactive Features
+  <a class="heading-link" href="#3-interactive-features">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="31-dynamic-ray-visualization">
+  3.1 Dynamic Ray Visualization
+  <a class="heading-link" href="#31-dynamic-ray-visualization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The prototype displays virtual light rays passing through a convex lens.</p>
+<p>These rays illustrate how light from an object is refracted by the lens and converges to form an image.</p>
+<p>Users can enable or disable the ray visualization to compare the experimental scene with and without the additional optical information.</p>
+<h4 id="32-adjustable-object-distance">
+  3.2 Adjustable Object Distance
+  <a class="heading-link" href="#32-adjustable-object-distance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Users can adjust the object distance using an interactive slider.</p>
+<p>The prototype uses a convex lens with a fixed focal length of 10 cm. The object distance can be adjusted between 15 cm and 40 cm.</p>
+<p>When the object distance changes, the system recalculates the image distance and magnification and updates the virtual ray diagram.</p>
+<p>The calculations are based on the thin lens equation:</p>
+$$
+\frac{1}{f}=\frac{1}{u}+\frac{1}{v}
+$$<p>and the magnification equation:</p>
+$$
+m=-\frac{v}{u}
+$$<p>where:</p>
+<ul>
+<li>\(f\) is the focal length.</li>
+<li>\(u\) is the object distance.</li>
+<li>\(v\) is the image distance.</li>
+<li>\(m\) is the lateral magnification.</li>
+</ul>
+<p>This interaction allows users to explore how changing the position of an object affects the location and size of its image.</p>
+<h4 id="33-optical-information-and-labels">
+  3.3 Optical Information and Labels
+  <a class="heading-link" href="#33-optical-information-and-labels">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The prototype provides additional information about the optical system, including the focal length, object distance, image distance, magnification, and image properties.</p>
+<p>Users can show or hide optical labels and formulas according to their needs.</p>
+<p>This feature is intended to connect visual observations with the corresponding physical concepts and mathematical relationships.</p>
+<h4 id="34-language-selection-and-reset">
+  3.4 Language Selection and Reset
+  <a class="heading-link" href="#34-language-selection-and-reset">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The interface supports both English and Chinese, making the prototype accessible to users with different language preferences.</p>
+<p>A reset button allows users to return the experiment to its initial configuration.</p>
+<h3 id="4-example-interaction">
+  4. Example Interaction
+  <a class="heading-link" href="#4-example-interaction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Consider a convex lens with a focal length of 10 cm.</p>
+<p>When the object is placed 30 cm from the lens, the calculated image distance is 15 cm and the magnification is −0.5.</p>
+<p>The image is therefore real, inverted, and reduced.</p>
+<p>If the user moves the object to 20 cm from the lens, the image distance becomes 20 cm and the magnification becomes −1.</p>
+<p>The image is now real, inverted, and the same size as the object.</p>
+<p>Through the interactive visualization, users can observe these changes while exploring the relationship between object distance and image formation.</p>
+<h3 id="5-why-this-is-an-ar-prototype">
+  5. Why This Is an AR Prototype
+  <a class="heading-link" href="#5-why-this-is-an-ar-prototype">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The main concept of the application is to enhance the user&rsquo;s perception of a physical optical experiment by adding information that would otherwise be invisible.</p>
+<p>In the proposed final application, AR glasses would overlay calculated light paths, focal points, and optical parameters onto real experimental equipment.</p>
+<p>The current prototype simulates this experience by combining a realistic laboratory background with interactive virtual graphics.</p>
+<p>It is important to clarify that this is a simulated AR prototype, not a fully implemented AR application. It does not perform real-time object recognition, camera tracking, or automatic spatial registration.</p>
+<p>Its purpose is to demonstrate the interaction concept and provide an initial experience for user evaluation.</p>
+<h3 id="6-prototype-limitations-and-future-improvements">
+  6. Prototype Limitations and Future Improvements
+  <a class="heading-link" href="#6-prototype-limitations-and-future-improvements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The current prototype has several limitations.</p>
+<p>First, the experimental background is a fixed, AI-generated image rather than a live camera feed. Therefore, the application cannot respond to physical movement of real laboratory equipment.</p>
+<p>Second, the virtual optical elements are positioned within a predefined simulated scene rather than automatically aligned with detected real-world objects.</p>
+<p>Third, the optical model uses an ideal thin lens and does not account for effects such as lens aberrations or real experimental measurement errors.</p>
+<p>Future versions could incorporate a camera feed, object recognition, and spatial tracking to align virtual information with real optical components. Additional optical elements could also be introduced to support more complex experiments.</p>
+<p>Despite these limitations, the prototype provides an initial interactive demonstration of how AR could support optics education.</p>
+<h3 id="7-conclusion">
+  7. Conclusion
+  <a class="heading-link" href="#7-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Through this prototype, I explored how augmented reality could make abstract optical concepts easier to visualize and understand.</p>
+<p>By combining an experimental scene with interactive ray diagrams and optical information, the application aims to connect theoretical knowledge with physical observation.</p>
+<p>The prototype is intended for an initial user experience rather than a complete technical implementation.</p>
+<p>In Lecture 9, I will use this prototype for user evaluation to investigate whether the proposed visualization and interactions are understandable and useful.</p>
+<figure style="margin:2rem 0;">
+  <a href="/myblog/images/hci-hw3/prototype-30cm.png"><img src="/myblog/images/hci-hw3/prototype-30cm.png" alt="Figure 2. Supplied prototype screenshot at an object distance of 30 cm: image distance 15 cm and magnification −0.50." loading="lazy" style="display:block;width:100%;height:auto;"></a>
+  <figcaption style="font-size:.9em;line-height:1.6;margin-top:.8rem;">Figure 2. Supplied prototype screenshot at an object distance of 30 cm: image distance 15 cm and magnification −0.50.</figcaption>
+</figure>
+
+<figure style="margin:2rem 0;">
+  <a href="/myblog/images/hci-hw3/prototype-40cm.png"><img src="/myblog/images/hci-hw3/prototype-40cm.png" alt="Figure 3. Supplied prototype screenshot at an object distance of 40 cm: image distance approximately 13.3 cm and magnification −0.33. These screenshots document the evaluated interface before minor label-position fixes." loading="lazy" style="display:block;width:100%;height:auto;"></a>
+  <figcaption style="font-size:.9em;line-height:1.6;margin-top:.8rem;">Figure 3. Supplied prototype screenshot at an object distance of 40 cm: image distance approximately 13.3 cm and magnification −0.33. These screenshots document the evaluated interface before minor label-position fixes.</figcaption>
+</figure>
+
+<h2 id="lecture-9--user-evaluation">
+  Lecture 9 — User Evaluation
+  <a class="heading-link" href="#lecture-9--user-evaluation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="1-evaluation-objective">
+  1. Evaluation Objective
+  <a class="heading-link" href="#1-evaluation-objective">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Following the development of the interactive prototype in Lecture 8, I conducted an initial user evaluation of the AR Optical Learning Assistant.</p>
+<p>The objective was to understand how a potential user perceived the concept, whether the interactive visualization was useful, and what limitations became apparent during the evaluation.</p>
+<p>Particular attention was given to the relationship between the user&rsquo;s expectations of an AR learning assistant and the actual experience provided by the prototype.</p>
+<h3 id="2-evaluation-method">
+  2. Evaluation Method
+  <a class="heading-link" href="#2-evaluation-method">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I invited one participant to evaluate the prototype and discuss its design.</p>
+<p>The evaluation focused on the application&rsquo;s purpose, virtual ray visualization, interaction methods, interface clarity, and potential use in real optical laboratories.</p>
+<p>Five open-ended questions were used to collect feedback. Additional discussion emerged naturally, particularly regarding the limited functionality of the prototype and the accessibility of future AR glasses.</p>
+<p>The evaluation was qualitative, focusing on the participant&rsquo;s opinions and reactions rather than quantitative performance measurements.</p>
+<h3 id="3-observations-and-user-feedback">
+  3. Observations and User Feedback
+  <a class="heading-link" href="#3-observations-and-user-feedback">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="31-initial-expectations-and-overall-experience">
+  3.1 Initial Expectations and Overall Experience
+  <a class="heading-link" href="#31-initial-expectations-and-overall-experience">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The participant initially expressed considerable interest in the proposed AR concept and was looking forward to its potential applications.</p>
+<p>However, after experiencing the prototype, the participant was somewhat disappointed by its limited functionality.</p>
+<p>This contrast between initial expectations and actual experience was an important observation. Although the concept was appealing, the current prototype did not yet provide the range of capabilities the participant expected from an AR learning assistant.</p>
+<h4 id="32-understanding-the-concept-and-visualization">
+  3.2 Understanding the Concept and Visualization
+  <a class="heading-link" href="#32-understanding-the-concept-and-visualization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>When asked about the application&rsquo;s purpose, the participant explained that it helped visualize how image formation through a convex lens changes with object distance.</p>
+<p>The participant also found the virtual ray overlays somewhat helpful, explaining that they recalled optics knowledge from middle school and made the light paths more noticeable than in a real experiment.</p>
+<p>These responses suggest that the main concept was understandable and that the visualization could support the recall of previously learned optical principles.</p>
+<h4 id="33-interaction-and-interface-problems">
+  3.3 Interaction and Interface Problems
+  <a class="heading-link" href="#33-interaction-and-interface-problems">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The participant appreciated the ability to adjust numerical parameters directly by dragging the controls, describing this interaction as convenient.</p>
+<p>However, several problems were identified.</p>
+<p>First, the participant did not understand the meaning of the formulas displayed in the upper-left and lower-right areas of the interface or how they related to the visualization.</p>
+<p>Second, some text in the upper-left area was obstructed, reducing readability.</p>
+<p>Finally, the participant considered the available functions too limited.</p>
+<p>These findings indicate that the prototype needs clearer explanations, improved information layout, and a broader range of interactions.</p>
+<h4 id="34-potential-applications-in-real-laboratories">
+  3.4 Potential Applications in Real Laboratories
+  <a class="heading-link" href="#34-potential-applications-in-real-laboratories">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Despite the limitations of the current prototype, the participant expressed willingness to use a more developed version through real AR glasses.</p>
+<p>They suggested that visual guidance could help students adjust optical paths and become familiar with experimental procedures more quickly.</p>
+<p>For practical optical alignment, the participant considered this approach potentially more useful than conventional text-based AI guidance.</p>
+<p>This feedback suggests an opportunity to develop the application beyond basic optics visualization into an interactive laboratory assistant.</p>
+<h4 id="35-accessibility-discussion">
+  3.5 Accessibility Discussion
+  <a class="heading-link" href="#35-accessibility-discussion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>After answering the evaluation questions, the participant raised an additional concern: whether people with myopia would be able to use AR glasses comfortably and effectively.</p>
+<p>This led to a discussion about possible display technologies, including retinal projection, and how future AR systems might accommodate different visual needs.</p>
+<p>Following the discussion, the participant became more optimistic about the possibility of addressing this issue.</p>
+<p>However, the conversation did not establish that retinal projection would eliminate the need for vision correction. The concern remains an important accessibility consideration for future development.</p>
+<h3 id="4-critical-reflection">
+  4. Critical Reflection
+  <a class="heading-link" href="#4-critical-reflection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="41-a-promising-concept-requires-meaningful-functionality">
+  4.1 A Promising Concept Requires Meaningful Functionality
+  <a class="heading-link" href="#41-a-promising-concept-requires-meaningful-functionality">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The participant&rsquo;s initial enthusiasm, followed by disappointment with the limited prototype, revealed a gap between the proposed concept and the implemented experience.</p>
+<p>This suggests that an attractive AR concept alone is not sufficient. The prototype must also demonstrate interactions that users consider meaningful.</p>
+<p>Future iterations should therefore focus on practical experimental tasks rather than simply adding more visual information.</p>
+<h4 id="42-visualization-must-be-connected-to-understanding">
+  4.2 Visualization Must Be Connected to Understanding
+  <a class="heading-link" href="#42-visualization-must-be-connected-to-understanding">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Although the virtual rays were helpful, the participant struggled to interpret the formulas.</p>
+<p>This highlights the difference between presenting information and supporting understanding.</p>
+<p>A future version could connect each formula to corresponding elements in the optical scene, highlight relevant distances, and explain changes interactively.</p>
+<h4 id="43-interface-readability-and-accessibility-matter">
+  4.3 Interface Readability and Accessibility Matter
+  <a class="heading-link" href="#43-interface-readability-and-accessibility-matter">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The obstructed text revealed a basic interface design problem that should be addressed before adding more functions.</p>
+<p>The discussion about myopia also demonstrated that accessibility needs to be considered from the early design stages.</p>
+<p>Future AR implementations should investigate compatibility with prescription glasses, adjustable optical correction, and different display technologies, rather than assuming that one display solution will work for everyone.</p>
+<h4 id="44-limitations-of-the-evaluation">
+  4.4 Limitations of the Evaluation
+  <a class="heading-link" href="#44-limitations-of-the-evaluation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>The current prototype simulates AR using a predefined laboratory scene and virtual overlays. It does not implement real-time tracking or spatial registration.</p>
+<p>Therefore, this evaluation cannot establish how the system would perform with physical laboratory equipment or how comfortable it would be to use through real AR glasses.</p>
+<p>Furthermore, the evaluation involved only one participant. The findings provide useful qualitative design feedback but cannot be generalized to a larger user population.</p>
+<h3 id="5-proposed-improvements">
+  5. Proposed Improvements
+  <a class="heading-link" href="#5-proposed-improvements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Based on the evaluation, I identified four priorities for future development:</p>
+<ol>
+<li>
+<p><strong>Improve interface clarity:</strong> Reorganize information panels, remove text obstruction, and provide contextual explanations for optical formulas.</p>
+</li>
+<li>
+<p><strong>Expand practical interactions:</strong> Add optical alignment guidance, adjustable components, and more complex experimental scenarios.</p>
+</li>
+<li>
+<p><strong>Consider accessibility:</strong> Investigate how users with different visual needs could comfortably use the system, including compatibility with vision correction.</p>
+</li>
+<li>
+<p><strong>Develop a real AR implementation:</strong> Introduce camera-based tracking and spatial registration to connect virtual optical information with physical equipment.</p>
+</li>
+</ol>
+<h3 id="6-conclusion">
+  6. Conclusion
+  <a class="heading-link" href="#6-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This user evaluation revealed both the potential and the limitations of the AR Optical Learning Assistant.</p>
+<p>The participant understood the central concept, appreciated direct parameter adjustment, and found the virtual ray visualization somewhat helpful.</p>
+<p>However, the limited functionality did not fully meet the participant&rsquo;s initial expectations. The evaluation also identified problems with formula comprehension, interface readability, and accessibility considerations.</p>
+<p>An important insight was that the participant valued the possibility of using AR for practical optical alignment, rather than only for visualizing theoretical concepts.</p>
+<p>The evaluation therefore suggests that future development should prioritize meaningful laboratory interactions, clearer visual explanations, and inclusive design.</p>
+<p>Although the findings are limited to one participant and a simulated AR prototype, they provide concrete directions for improving the next iteration.</p>
+<hr>
+<p><a href="/myblog/courses/hci/" >Back to HCI coursework</a></p>
+
+      </div>
+
+
+      <footer>
+
+
+
+
+
+
+
+
+
+
+
+
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector('.post-content') || document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+
+    2026
+     Lu
+    ·
+
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+
+  </section>
+</footer>
+
+  </main>
+
+
+
+
+
+  <script src="/myblog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
