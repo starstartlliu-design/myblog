@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  HCI Lab 2 — Unity Mobile Application: From Desktop to Android · Lu&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Lu">
+<meta name="description" content="Adapting the Moving Target Challenge to Android: virtual joystick control, NDK troubleshooting, an ARM64 build, and testing on an OPPO Find X8s.">
+<meta name="keywords" content="">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="HCI Lab 2 — Unity Mobile Application: From Desktop to Android">
+	<meta name="twitter:description" content="Adapting the Moving Target Challenge to Android: virtual joystick control, NDK troubleshooting, an ARM64 build, and testing on an OPPO Find X8s.">
+
+<meta property="og:url" content="https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/">
+	<meta property="og:site_name" content="Lu&#39;s Blog">
+	<meta property="og:title" content="HCI Lab 2 — Unity Mobile Application: From Desktop to Android">
+	<meta property="og:description" content="Adapting the Moving Target Challenge to Android: virtual joystick control, NDK troubleshooting, an ARM64 build, and testing on an OPPO Find X8s.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-11-08T12:00:00+01:00">
+		<meta property="article:modified_time" content="2026-11-08T12:00:00+01:00">
+		<meta property="article:tag" content="HCI">
+		<meta property="article:tag" content="Unity">
+		<meta property="article:tag" content="Android">
+		<meta property="article:tag" content="ML-Agents">
+
+
+
+
+<link rel="canonical" href="https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/myblog/css/coder.min.5e94c1acf7aa2066035cf2764ae3e4fe39db101d68b870f919966100d51fb861.css" integrity="sha256-XpTBrPeqIGYDXPJ2SuPk/jnbEB1ouHD5GZZhANUfuGE=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/myblog/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/myblog/css/homework.min.f5308cd878e0b0cbeab0074707035f1405774f988320f41eada412b8735bb544.css" integrity="sha256-9TCM2HjgsMvqsAdHBwNfFAV3T5iDIPQeraQSuHNbtUQ=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://starstartlliu-design.github.io/myblog/">
+      Lu&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/myblog/courses/hci/">HCI</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/">
+              HCI Lab 2 — Unity Mobile Application: From Desktop to Android
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-11-08T12:00:00&#43;01:00">
+                November 8, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              13-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/myblog/categories/human-computer-interaction/">Human-Computer Interaction</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/myblog/tags/hci/">HCI</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/unity/">Unity</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/android/">Android</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/myblog/tags/ml-agents/">ML-Agents</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      
+<details class="entry__toc toc" >
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction-and-objectives">1. Introduction and Objectives</a></li>
+    <li><a href="#2-reusing-the-previous-unity-project">2. Reusing the Previous Unity Project</a></li>
+    <li><a href="#3-mobile-interaction-design">3. Mobile Interaction Design</a></li>
+    <li><a href="#4-android-environment-and-build-configuration">4. Android Environment and Build Configuration</a></li>
+    <li><a href="#5-problems-encountered-and-solutions">5. Problems Encountered and Solutions</a>
+      <ul>
+        <li><a href="#51-desktop-input-adaptation">5.1 Desktop Input Adaptation</a></li>
+        <li><a href="#52-ml-agents-control-mode">5.2 ML-Agents Control Mode</a></li>
+        <li><a href="#53-mobile-screen-adaptation">5.3 Mobile Screen Adaptation</a></li>
+        <li><a href="#54-android-ndk-installation-failure">5.4 Android NDK Installation Failure</a></li>
+        <li><a href="#55-unity-compilation-and-build-issues">5.5 Unity Compilation and Build Issues</a></li>
+        <li><a href="#56-unity-input-system-startup-warnings">5.6 Unity Input System Startup Warnings</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-deployment-and-device-testing">6. Deployment and Device Testing</a></li>
+    <li><a href="#7-results-and-discussion">7. Results and Discussion</a></li>
+    <li><a href="#8-conclusion">8. Conclusion</a></li>
+  </ul>
+</nav>
+</details>
+
+
+      <div class="post-content">
+        
+        <style>
+.post-content:has(.hci-lab2-marker) { overflow-wrap:anywhere; }
+.post-content:has(.hci-lab2-marker) table { display:block; max-width:100%; overflow-x:auto; }
+.post-content:has(.hci-lab2-marker) pre { max-width:100%; overflow-x:auto; overflow-wrap:normal; }
+.post-content:has(.hci-lab2-marker) figure { margin:2rem auto; }
+.post-content:has(.hci-lab2-marker) figure img { display:block; width:100%; height:auto; margin:auto; }
+.post-content:has(.hci-lab2-marker) figure.lab2-phone { max-width:280px; }
+.post-content:has(.hci-lab2-marker) figcaption { font-size:.9em; line-height:1.5; text-align:center; margin-top:.7rem; }
+</style>
+<p><span class="hci-lab2-marker" hidden></span></p>
+<h2 id="1-introduction-and-objectives">
+  1. Introduction and Objectives
+  <a class="heading-link" href="#1-introduction-and-objectives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In this laboratory, I adapted the Moving Target Challenge from <a href="/myblog/posts/hci-lab-1/" >HCI Lab 1</a> into an Android application. The original environment placed a blue spherical Agent and a red moving Target inside a bounded arena. My objective was to make the same task playable on a touchscreen, using a virtual joystick to control pursuit.</p>
+<p>The main challenge was to change the interaction and deployment platform while preserving the experiment underneath. I wanted to retain the movement rules, target motion, rewards, and episode resets, rather than introduce a different task. The work therefore covered touch input, screen adaptation, Android dependencies, APK construction, and testing on an OPPO Find X8s.</p>
+<p>The final application installed and ran on the phone, and hands-on interaction testing reported no abnormalities. However, two Input System diagnostics remained reproducible during cold startup. I distinguish these unresolved startup errors from the successful rendering and control results throughout this report.</p>
+<h2 id="2-reusing-the-previous-unity-project">
+  2. Reusing the Previous Unity Project
+  <a class="heading-link" href="#2-reusing-the-previous-unity-project">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I kept the Lab 1 project at <code>D:\HCI_Lab1\MovingTargetChallenge</code> and worked in a separate copy at <code>D:\HCI_Lab2\MovingTargetChallengeAndroid</code>. The copy retained <code>Assets</code>, <code>Packages</code>, <code>ProjectSettings</code>, and <code>TrainingConfigs</code>; regenerable directories such as <code>Library</code>, <code>Temp</code>, and <code>Logs</code> were excluded. SHA-256 checks covered 96 original files, which remained unchanged after development and testing.</p>
+<p>The main scene remained <code>Assets/Scenes/MovingTargetChallenge.unity</code>. The existing <code>MovingTargetAgent.cs</code> supplied observations, action handling, rewards, and episode management, while <code>MovingTargetMotion.cs</code> controlled the moving target. The original ONNX model and training configuration were preserved. I did not retrain PPO or run ONNX inference on Android: this version is a manually controlled mobile application.</p>
+<p>The retained physical settings were important for comparison with the desktop task:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Parameter</th>
+					<th style="text-align: right">Retained value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Arena size</td>
+					<td style="text-align: right">16 × 16 units</td>
+			</tr>
+			<tr>
+					<td>Agent position limit</td>
+					<td style="text-align: right">±7.5 units</td>
+			</tr>
+			<tr>
+					<td>Target position limit</td>
+					<td style="text-align: right">±7.4 units</td>
+			</tr>
+			<tr>
+					<td>Agent acceleration</td>
+					<td style="text-align: right">18 units/s²</td>
+			</tr>
+			<tr>
+					<td>Agent maximum speed</td>
+					<td style="text-align: right">6 units/s</td>
+			</tr>
+			<tr>
+					<td>Target speed</td>
+					<td style="text-align: right">1.5 units/s</td>
+			</tr>
+			<tr>
+					<td>Capture distance</td>
+					<td style="text-align: right">0.95 units</td>
+			</tr>
+			<tr>
+					<td>Physics timestep</td>
+					<td style="text-align: right">0.02 s</td>
+			</tr>
+			<tr>
+					<td>Decision period</td>
+					<td style="text-align: right">5 physics steps</td>
+			</tr>
+			<tr>
+					<td>Maximum episode length</td>
+					<td style="text-align: right">2,000 physics steps, approximately 40 simulated seconds</td>
+			</tr>
+	</tbody>
+</table>
+<p>Rewards still account for progress toward the target, a step penalty, capture, and leaving the arena. Target motion and the reward function were not revised. This keeps the mobile work focused on access to the existing task rather than changing the learning experiment or claiming new policy performance.</p>
+<h2 id="3-mobile-interaction-design">
+  3. Mobile Interaction Design
+  <a class="heading-link" href="#3-mobile-interaction-design">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I placed a fixed virtual joystick in the lower-left corner, outside the main arena display on the tested phone. Its translucent base and blue handle make the control distinguishable from the blue Agent. The current control uses simple square shapes; it is a functional interface rather than a finished visual redesign.</p>
+<p><code>VirtualJoystick.cs</code> tracks one pointer, converts its screen position into local UI coordinates, and limits the resulting <code>Vector2</code> to the unit circle. Its X component becomes the first continuous action, controlling world X; its Y component becomes the second action, controlling world Z. The Agent still applies these actions through <code>OnActionReceived</code>, so the joystick does not move the Transform directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Vector2 manual = Joystick != <span style="color:#66d9ef">null</span> &amp;&amp; Joystick.IsHeld ? Joystick.Value : <span style="color:#66d9ef">new</span> Vector2(x, z);
+</span></span><span style="display:flex;"><span>actions[<span style="color:#ae81ff">0</span>] = manual.x;
+</span></span><span style="display:flex;"><span>actions[<span style="color:#ae81ff">1</span>] = manual.y;
+</span></span></code></pre></div><p>The keyboard Heuristic remains available for desktop debugging when the joystick is not held. Pointer release, cancellation, disabling, focus loss, and application pause reset the joystick input. Releasing the control resets the requested acceleration, not the Rigidbody velocity: the original damping allows the Agent to slow down with inertia. The retained decision interval is nominally 0.1 s; I did not measure end-to-end touch latency.</p>
+<p>The scene contains a Canvas with Canvas Scaler and GraphicRaycaster, a SafeArea container, the joystick and handle, and one EventSystem using <code>InputSystemUIInputModule</code>. The Canvas uses a 1920 × 1080 reference resolution. <code>MobileViewport.cs</code> follows <code>Screen.safeArea</code> and adjusts the orthographic camera size to retain the arena on narrower views. Landscape orientation keeps the play area and thumb control readable together.</p>
+<figure class="lab2-landscape">
+  <img src="/myblog/images/hci-lab2/phone-gameplay.png" alt="Actual landscape Android application showing the blue Agent, red Target, arena and lower-left joystick" loading="lazy" width="2344" height="1080">
+  <figcaption>Figure 1. The application running on the OPPO Find X8s. The arena and joystick are visible in a real 2344 × 1080 landscape capture. A frame demonstrates display, not touch accuracy or frame rate.</figcaption>
+</figure>
+<h2 id="4-android-environment-and-build-configuration">
+  4. Android Environment and Build Configuration
+  <a class="heading-link" href="#4-android-environment-and-build-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I retained the project&rsquo;s Unity and package versions and added the Android platform components for the same Editor installation. The verified environment was:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Component</th>
+					<th>Version or configuration</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Unity Editor</td>
+					<td>6000.0.85f2</td>
+			</tr>
+			<tr>
+					<td>Universal Render Pipeline</td>
+					<td>17.0.4</td>
+			</tr>
+			<tr>
+					<td>ML-Agents</td>
+					<td>4.1.0</td>
+			</tr>
+			<tr>
+					<td>Input System</td>
+					<td>1.20.0</td>
+			</tr>
+			<tr>
+					<td>App UI dependency</td>
+					<td>1.3.6</td>
+			</tr>
+			<tr>
+					<td>Inference dependency</td>
+					<td><code>com.unity.ai.inference</code> 2.6.1</td>
+			</tr>
+			<tr>
+					<td>Android NDK</td>
+					<td>r27c, 27.2.12479018</td>
+			</tr>
+			<tr>
+					<td>OpenJDK</td>
+					<td>17.0.18</td>
+			</tr>
+			<tr>
+					<td>SDK Build-tools</td>
+					<td>36.0.0</td>
+			</tr>
+			<tr>
+					<td>Android architecture / scripting backend</td>
+					<td>ARM64 / IL2CPP</td>
+			</tr>
+			<tr>
+					<td>Minimum / target Android API</td>
+					<td>23 / 36</td>
+			</tr>
+			<tr>
+					<td>Application identifier</td>
+					<td><code>com.hcilab.movingtarget.android</code></td>
+			</tr>
+			<tr>
+					<td>Build type</td>
+					<td>Development APK</td>
+			</tr>
+	</tbody>
+</table>
+<p>Unity identified the SDK, NDK, and OpenJDK beneath <code>D:\HCI_Lab1\UnityEditor\6000.0.85f2\Editor\Data\PlaybackEngines\AndroidPlayer</code>. The NDK needed a directory repair, described below, but the successful SDK and JDK installations were retained. I did not reinstall Unity to correct the Hub&rsquo;s NDK status.</p>
+<p>The Android build explicitly selected <code>MovingTargetChallenge.unity</code>, avoiding the template <code>SampleScene</code> entry. The separate Android Builder configured ARM64, IL2CPP, landscape orientation, and the application identifier. The saved scene was reopened to check its references before building, and the APK was written outside the project to <code>D:\HCI_Lab2\Builds\stage3-20261108</code>.</p>
+<h2 id="5-problems-encountered-and-solutions">
+  5. Problems Encountered and Solutions
+  <a class="heading-link" href="#5-problems-encountered-and-solutions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="51-desktop-input-adaptation">
+  5.1 Desktop Input Adaptation
+  <a class="heading-link" href="#51-desktop-input-adaptation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The desktop Heuristic read WASD or arrow keys, which did not provide an on-screen control for the phone. I investigated the existing two-action path before adding the joystick. Since both actions already represented horizontal acceleration, replacing their input source was sufficient; rewriting the Rigidbody movement would have changed the task unnecessarily.</p>
+<p>The solution was to feed the joystick into the same Heuristic action buffer and preserve keyboard fallback. On-device evidence showed rightward movement and handle recentering, and hands-on testing covered directional control, release behavior, multiple touches, background return, and episode reset without reported abnormalities. These checks do not quantify precision, accessibility, or latency.</p>
+<h3 id="52-ml-agents-control-mode">
+  5.2 ML-Agents Control Mode
+  <a class="heading-link" href="#52-ml-agents-control-mode">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The original scene used <code>Default</code> behavior with no model reference. That mode can select trainer communication, model inference, or Heuristic control depending on availability. For a touch-controlled application, I made the intended route explicit with <code>HeuristicOnly</code> and an empty model reference.</p>
+<p>I also checked <code>LabExperimentRuntime</code> and <code>LabBuildSceneProcessor</code>. Their experiment-policy branches could intercept manual input, and the former used a default time scale of 20 for non-training policies. The Android build no longer injects that runtime component; the Lab 2 default evaluation time scale was changed to 1, and joystick input bypasses the baseline branch. Reloading the scene confirmed the joystick reference, <code>HeuristicOnly</code>, and the absence of <code>LabExperimentRuntime</code>. ML-Agents and inference dependencies remain installed, but PPO does not control this application.</p>
+<h3 id="53-mobile-screen-adaptation">
+  5.3 Mobile Screen Adaptation
+  <a class="heading-link" href="#53-mobile-screen-adaptation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The desktop camera and screen assumptions were unsuitable for arbitrary phone proportions. A portrait or narrow view could reduce the visible horizontal area, while a control placed against the physical screen edge could overlap an inset or system gesture region.</p>
+<p>I used landscape layout, Canvas Scaler, a Safe Area container, and an aspect-aware orthographic camera rather than changing the arena dimensions. The phone captures show the complete arena, both characters, and the joystick. After a background return, one capture caught the system&rsquo;s orientation transition; a later stable capture confirmed the landscape layout. This verifies the tested device, not every Android screen or display cutout.</p>
+<h3 id="54-android-ndk-installation-failure">
+  5.4 Android NDK Installation Failure
+  <a class="heading-link" href="#54-android-ndk-installation-failure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Unity Hub failed twice while installing Android NDK r27c. Both attempts reached the end of extraction, then failed during directory renaming. The log contained:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>unzip finished
+</span></span><span style="display:flex;"><span>EPERM: operation not permitted, rename
+</span></span><span style="display:flex;"><span>Module Android NDK after installation step failed
+</span></span></code></pre></div><p>The errors occurred at approximately 14:28:03 and 14:28:56 on 8 November 2026, local time (UTC+1). The files remained under <code>AndroidPlayer\NDK\android-ndk-r27c</code>, rather than directly under the NDK root. Hub was trying to move that nested directory to a temporary sibling before completing its layout. The failure was therefore an installation-finalization problem, not evidence that the download or extraction had failed.</p>
+<p>I checked the cache ZIP, directory contents, free space, permissions, and file-use information after Hub and its installer processes had exited. The archive contained 7,935 files, with an uncompressed total of 2,361,056,613 bytes. All extracted files matched their ZIP counterparts by SHA-256. The permission check found no explicit deny rule in the checked directories, and the file-use query reported no owners. These observations did not establish the original cause of <code>EPERM</code>.</p>
+<p>The repair copied the verified contents into Unity&rsquo;s expected <code>AndroidPlayer\NDK</code> root while leaving the original nested directory intact as a rollback copy. No different existing file was overwritten, and the download ZIP was retained. The 7,935 files at the repaired root also matched the ZIP by SHA-256. <code>source.properties</code> reported <code>27.2.12479018</code>; Clang and LLVM reported 18.0.3, while Make and <code>ndk-build.cmd --version</code> reported GNU Make 4.3, all with exit code 0. Unity later recognized this NDK path and completed the Android build. The Hub&rsquo;s display state was not repaired or treated as the final toolchain test.</p>
+<h3 id="55-unity-compilation-and-build-issues">
+  5.5 Unity Compilation and Build Issues
+  <a class="heading-link" href="#55-unity-compilation-and-build-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The Android Builder initially contained a path-character escaping error and a mismatch between its build-summary field types and Unity&rsquo;s API. The compiler identified the problems directly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>error CS1010: Newline in constant
+</span></span><span style="display:flex;"><span>error CS0266: Cannot implicitly convert type &#39;int&#39; to &#39;uint&#39;. An explicit conversion exists (are you missing a cast?)
+</span></span></code></pre></div><p>I corrected path trimming to use <code>Path.DirectorySeparatorChar</code> and changed the error/warning count fields from <code>uint</code> to <code>int</code>. Compilation then passed. The build output boundary was also adjusted to allow the separate <code>D:\HCI_Lab2\Builds</code> directory. These changes affected the Editor build code, not rewards, movement, target behavior, or the ONNX model.</p>
+<p>The final build reported:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Build Finished, Result: Success.
+</span></span></code></pre></div><p>BuildReport recorded 0 errors, 971 warnings, and 498.19 s, approximately 8 min 18 s. The Editor process, including startup and shutdown, took 522.00 s, approximately 8 min 42 s. The main log contained 970 Sentis shader warning entries, including 920 <code>ConvGeneric</code> variant warnings; the Gradle log also contained a Jetifier deprecation notice. I retained these warnings rather than remove inference dependencies. The build process exited with code 0, and APK signature verification passed. A successful build does not establish that every inference backend or device configuration works.</p>
+<h3 id="56-unity-input-system-startup-warnings">
+  5.6 Unity Input System Startup Warnings
+  <a class="heading-link" href="#56-unity-input-system-startup-warnings">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The application displayed correctly, but its first device startup produced an exception and a duplicate-touchscreen assertion. Although grouped here as startup diagnostics, these were logged as errors rather than harmless information:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ArgumentException: &#39;InputUpdateType.None&#39; is not a valid update mask
+</span></span><span style="display:flex;"><span>Already added touchscreen
+</span></span></code></pre></div><p>The available stack traces point to <code>InputStateHistory.set_updateMask</code>, <code>EnhancedTouch.Finger</code>, <code>Touch.AddTouchscreen</code>, and native-device discovery in Input System. The duplicate assertion appears when <code>EnhancedTouchSupport.SetUpState</code> adds the screen again. The traces do not enter UGUI, <code>VirtualJoystick</code>, or the Agent script. Local source inspection showed that a screen is added to the list before finger-history creation; a failure at the latter stage can leave a screen entry for the next addition.</p>
+<p>App UI enabling Enhanced Touch and Input System resetting its static state during the same startup phase provide a possible initialization-order explanation. However, the exact triggering order was not recorded, so I do not claim a confirmed root cause. There was no demonstrated safe project-only fix. I kept the package versions and code unchanged rather than suppress errors or force internal state changes.</p>
+<p>The same APK was cold-started without clearing application data. The two messages each appeared once in the initial startup and once in the cold-start retest. Duplicate snapshots of the same event were not counted as new occurrences. Cold startup and background recovery succeeded, and no application crash or ANR was found within the captured windows. <strong>The errors remain unresolved known limitations; normal touch behavior is not proof that they are fixed.</strong></p>
+<h2 id="6-deployment-and-device-testing">
+  6. Deployment and Device Testing
+  <a class="heading-link" href="#6-deployment-and-device-testing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I used the ADB executable included with Unity&rsquo;s Android SDK. The initial connection was <code>unauthorized</code>; after accepting USB debugging on the phone, it changed to <code>device</code>. The queried hardware and software matched the APK requirements:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Device property</th>
+					<th>Observed value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Phone</td>
+					<td>OPPO Find X8s; ADB model PKT110</td>
+			</tr>
+			<tr>
+					<td>Android version / API</td>
+					<td>16 / 36</td>
+			</tr>
+			<tr>
+					<td>CPU ABI</td>
+					<td><code>arm64-v8a</code></td>
+			</tr>
+			<tr>
+					<td>Physical screen</td>
+					<td>1080 × 2344 pixels</td>
+			</tr>
+			<tr>
+					<td>Landscape application capture</td>
+					<td>2344 × 1080 pixels</td>
+			</tr>
+			<tr>
+					<td>Physical / override density</td>
+					<td>560 / 480 dpi</td>
+			</tr>
+	</tbody>
+</table>
+<p>The package had not previously been installed. Installation returned <code>Success</code>, and launching <code>com.hcilab.movingtarget.android</code> returned <code>Status: ok</code>. The relevant commands were:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>adb devices -l
+</span></span><span style="display:flex;"><span>adb install <span style="color:#e6db74">&#34;D:\HCI_Lab2\Builds\stage3-20261108\MovingTargetChallenge.apk&#34;</span>
+</span></span><span style="display:flex;"><span>adb shell am start -W -n com.hcilab.movingtarget.android/com.unity3d.player.appui.AppUIGameActivity
+</span></span></code></pre></div><figure class="lab2-phone">
+  <img src="/myblog/images/hci-lab2/phone-home-01.png" alt="Real OPPO home screen with the installed Moving Target Challenge Unity icon" loading="lazy" width="1080" height="2344">
+  <figcaption>Figure 2. The installed Moving Target Challenge icon on the phone's home screen. The complete desktop capture retains the original wallpaper and surrounding icons.</figcaption>
+</figure>
+<p>I checked the running scene, joystick response, release behavior, and return from the background. Hands-on testing reported no abnormalities for the requested directions, recentering and inertia, multiple touches, background return, and new episodes after capture or leaving the arena. Screenshots support the rendering checks; they do not independently prove all of these interactions. The later cold-start retest reused the same APK and did not repeat the hands-on checklist.</p>
+<p>The first Activity launch reported 382 ms, while the cold-start retest reported 525 ms. These are Android Activity timings, not complete Unity loading times or touch-response measurements. During background-return checks, the same application process remained alive. Short observation windows showed no crash or ANR, but they do not constitute a long-duration stability study.</p>
+<h2 id="7-results-and-discussion">
+  7. Results and Discussion
+  <a class="heading-link" href="#7-results-and-discussion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The final artifact and verification results were:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Item</th>
+					<th>Result</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Unity import and C# compilation</td>
+					<td>Successful after the Builder corrections</td>
+			</tr>
+			<tr>
+					<td>Mobile scene</td>
+					<td>Joystick bound; one EventSystem; <code>HeuristicOnly</code></td>
+			</tr>
+			<tr>
+					<td>Android build</td>
+					<td>Successful; process exit code 0</td>
+			</tr>
+			<tr>
+					<td>BuildReport</td>
+					<td>0 errors; 971 warnings</td>
+			</tr>
+			<tr>
+					<td>Build duration</td>
+					<td>Approximately 8 min 18 s</td>
+			</tr>
+			<tr>
+					<td>APK size</td>
+					<td>60,857,736 bytes, approximately 58.04 MiB</td>
+			</tr>
+			<tr>
+					<td>ABI / backend</td>
+					<td><code>arm64-v8a</code> / IL2CPP</td>
+			</tr>
+			<tr>
+					<td>Minimum / target API</td>
+					<td>23 / 36</td>
+			</tr>
+			<tr>
+					<td>Installation / launch</td>
+					<td><code>Success</code> / <code>Status: ok</code></td>
+			</tr>
+			<tr>
+					<td>Hands-on interaction</td>
+					<td>No abnormalities reported</td>
+			</tr>
+			<tr>
+					<td>Cold startup / background recovery</td>
+					<td>Successful, with the startup diagnostics still present</td>
+			</tr>
+			<tr>
+					<td>PPO retraining / Android ONNX inference</td>
+					<td>Neither performed</td>
+			</tr>
+	</tbody>
+</table>
+<p>The APK remains at <code>D:\HCI_Lab2\Builds\stage3-20261108\MovingTargetChallenge.apk</code>. Its SHA-256 is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>6DE3F65D9C86A5E37AFA7AB84599FB11CA16AD50C3FE5D933C7D55C75A6BC028
+</span></span></code></pre></div><p>The installed <code>base.apk</code> matched this hash, and signature verification succeeded with v1 and v2. This links the tested application to the retained build artifact. The APK size comes from the file itself, rather than BuildReport&rsquo;s larger aggregate output size.</p>
+<p>The main result is a usable touch-controlled port of the same environment, with clear separation between input and movement logic. Equally important, the NDK investigation showed why a failed installer status should be traced to its actual failing step. Copying verified files into the required layout solved that specific installation obstacle without changing the task or replacing successful SDK and JDK components.</p>
+<p>The remaining limitations are substantial enough to record explicitly. The Input System startup errors are reproducible and unresolved. Only one physical device was tested, and I did not benchmark frame rate, temperature, energy use, or end-to-end input latency. There was no emulator evaluation, long-duration stability run, or Android PPO inference test. The retained 0.1 s decision interval and square joystick may deserve later usability evaluation, but I did not change them or claim a measured improvement.</p>
+<h2 id="8-conclusion">
+  8. Conclusion
+  <a class="heading-link" href="#8-conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I brought the Moving Target Challenge from desktop Unity to a working Android application while preserving its arena, physics, rewards, target motion, and original training materials. The mobile version uses explicit Heuristic control, a virtual joystick, landscape UI, and a verified ARM64 / IL2CPP APK tested on an OPPO Find X8s.</p>
+<p>The most useful lesson was to separate successful installation, compilation, packaging, visible execution, and interaction from a claim of error-free operation. The port meets its basic mobile interaction objective, and the NDK installation obstacle was repaired with verified files and a rollback copy. The reproducible Enhanced Touch startup diagnostics remain a documented defect that needs further targeted investigation, rather than being hidden by the application&rsquo;s otherwise successful behavior.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Lu 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/myblog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

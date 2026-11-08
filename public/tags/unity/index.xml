@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sat, 07 Nov 2026 12:00:00 +0100</lastBuildDate>
+			<lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0100</lastBuildDate>
 		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HCI Lab 2 — Unity Mobile Application: From Desktop to Android</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/</link>
+				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/</guid>
+				<description>&lt;style&gt;&#xA;.post-content:has(.hci-lab2-marker) { overflow-wrap:anywhere; }&#xA;.post-content:has(.hci-lab2-marker) table { display:block; max-width:100%; overflow-x:auto; }&#xA;.post-content:has(.hci-lab2-marker) pre { max-width:100%; overflow-x:auto; overflow-wrap:normal; }&#xA;.post-content:has(.hci-lab2-marker) figure { margin:2rem auto; }&#xA;.post-content:has(.hci-lab2-marker) figure img { display:block; width:100%; height:auto; margin:auto; }&#xA;.post-content:has(.hci-lab2-marker) figure.lab2-phone { max-width:280px; }&#xA;.post-content:has(.hci-lab2-marker) figcaption { font-size:.9em; line-height:1.5; text-align:center; margin-top:.7rem; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;&lt;span class=&#34;hci-lab2-marker&#34; hidden&gt;&lt;/span&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introduction-and-objectives&#34;&gt;&#xD;&#xA;  1. Introduction and Objectives&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction-and-objectives&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In this laboratory, I adapted the Moving Target Challenge from &lt;a href=&#34;https://starstartlliu-design.github.io/myblog/posts/hci-lab-1/&#34; &gt;HCI Lab 1&lt;/a&gt; into an Android application. The original environment placed a blue spherical Agent and a red moving Target inside a bounded arena. My objective was to make the same task playable on a touchscreen, using a virtual joystick to control pursuit.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>HCI Lab 1 — Hugo Blog Setup and Unity ML-Agents Experiment</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-1/</link>
