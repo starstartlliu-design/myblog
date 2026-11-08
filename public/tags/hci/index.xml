@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0100</lastBuildDate>
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0100</lastBuildDate>
 		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/hci/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -35,6 +35,13 @@
 				<description>&lt;h1 id=&#34;the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success&#34;&gt;&#xD;&#xA;  The Rise and Fall of Microsoft Kinect: Why Technological Innovation Does Not Guarantee Interaction Success&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#the-rise-and-fall-of-microsoft-kinect-why-technological-innovation-does-not-guarantee-interaction-success&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;HCI Homework 2 — Lecture 6&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-introduction&#34;&gt;&#xD;&#xA;  1. Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In November 2010, Microsoft introduced Kinect for the Xbox 360, a motion-sensing device that allowed people to control games using their bodies instead of conventional handheld controllers.&lt;/p&gt;&#xA;&lt;p&gt;The concept was ambitious: users could become the controller themselves. By combining depth sensing, computer vision, and real-time human pose estimation, Kinect made full-body interaction available to millions of consumers.&lt;/p&gt;</description>
 			</item>
 			<item>
+				<title>HCI Lab 4 — 3D Gaussian Splatting in Unity</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-4/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-lab-4/</guid>
+				<description>&lt;h2 id=&#34;introduction-and-objectives&#34;&gt;&#xD;&#xA;  Introduction and Objectives&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction-and-objectives&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In this lab, I explored how &lt;strong&gt;3D Gaussian Splatting (3DGS)&lt;/strong&gt; can be displayed and inspected in Unity. The objectives are to import a genuine pretrained Gaussian model, convert it into a &lt;code&gt;GaussianSplatAsset&lt;/code&gt;, bind it to a &lt;code&gt;GaussianSplatRenderer&lt;/code&gt;, and examine the scene from different viewpoints. I followed the Unity workflow introduced in Mohamed ABDUL GAFOOR&amp;rsquo;s &lt;em&gt;3D Gaussian splatting in unity&lt;/em&gt; lecture slides.&lt;/p&gt;</description>
+			</item>
+			<item>
 				<title>HCI Lab 2 — Unity Mobile Application: From Desktop to Android</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-2/</link>
 				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
@@ -44,7 +51,7 @@
 			<item>
 				<title>HCI Lab 3 — Building and Debugging a Local LLM Talking Character</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-3/</link>
-				<pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 08 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-lab-3/</guid>
 				<description>&lt;h2 id=&#34;introduction&#34;&gt;&#xD;&#xA;  Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;For this lab I built a local conversational character in Unity and investigated two HCI exercises: &lt;strong&gt;Exercise 1 — Measure Latency&lt;/strong&gt; and &lt;strong&gt;Exercise 4 — Show the Thinking?&lt;/strong&gt; The central challenge was not merely producing a response. The interface also had to communicate its state, remain usable during streaming, and distinguish a completed answer from a prematurely stopped generation. This report therefore focuses on implementation decisions, problems encountered, repairs, and the evidence used to check them. The final ten-trial study is reported as a small, exploratory case study rather than a generalizable user experiment.&lt;/p&gt;</description>
 			</item>
@@ -58,21 +65,21 @@
 			<item>
 				<title>HCI Homework 3 — Enhancing Human Abilities in the Age of Augmented Reality</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/</link>
-				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-3/</guid>
 				<description>&lt;h2 id=&#34;lecture-7--ideation&#34;&gt;&#xD;&#xA;  Lecture 7 — Ideation&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-7--ideation&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;  Concept 1 — AR Optical Learning Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-1--ar-optical-learning-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR-based learning assistant helps students understand optical principles by overlaying virtual light rays, optical axes, focal points, and focal lengths onto real optical setups. As users change the object-to-lens distance, the system updates the ray diagram to illustrate image formation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;  Concept 2 — AR Indoor Navigation Assistant&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#concept-2--ar-indoor-navigation-assistant&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;An AR indoor navigation assistant helps users find their way through unfamiliar buildings. After entering a destination, users see directional arrows, floor information, and classroom labels overlaid onto the real environment through their smartphone cameras.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>HCI Homework 4 — Smartphone Evolution, Ubiquitous Computing, and Future MR Applications</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-4/</link>
-				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-4/</guid>
 				<description>&lt;h2 id=&#34;lecture-10-the-evolution-of-smartphone-shapes-and-their-future-development&#34;&gt;&#xD;&#xA;  Lecture 10: The Evolution of Smartphone Shapes and Their Future Development&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-10-the-evolution-of-smartphone-shapes-and-their-future-development&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;1-introduction&#34;&gt;&#xD;&#xA;  1. Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;The physical shape of mobile phones has changed significantly over the past few decades. From bulky devices with physical keyboards to modern smartphones with large touchscreens, these transformations have been driven by technological development, changing user needs, and improvements in human-computer interaction (HCI).&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>HCI Homework 1</title>
 				<link>https://starstartlliu-design.github.io/myblog/posts/hci-homework-1/</link>
-				<pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+				<pubDate>Tue, 29 Sep 2026 00:00:00 +0200</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-homework-1/</guid>
 				<description>&lt;h1 id=&#34;lecture-1-affordances&#34;&gt;&#xD;&#xA;  Lecture 1: Affordances&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lecture-1-affordances&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;good-affordance--the-login-screen-in-genshin-impact&#34;&gt;&#xD;&#xA;  Good Affordance – The Login Screen in Genshin Impact&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#good-affordance--the-login-screen-in-genshin-impact&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;The login screen of &lt;em&gt;Genshin Impact&lt;/em&gt; is a good example of affordance in a digital interface. A large door is placed at the center of the screen, directly in front of the player. A door naturally suggests the action of entering or passing through it. At the same time, the text &lt;strong&gt;“Click to Begin”&lt;/strong&gt; (点击进入 in the Chinese version) explicitly tells the user how to perform this action.&lt;/p&gt;</description>
 			</item>

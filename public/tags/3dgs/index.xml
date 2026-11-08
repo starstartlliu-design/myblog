@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>3DGS on Lu&#39;s Blog</title>
+		<link>https://starstartlliu-design.github.io/myblog/tags/3dgs/</link>
+		<description>Recent content in 3DGS on Lu&#39;s Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+
+
+
+
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0100</lastBuildDate>
+
+			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/3dgs/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HCI Lab 4 — 3D Gaussian Splatting in Unity</title>
+				<link>https://starstartlliu-design.github.io/myblog/posts/hci-lab-4/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/posts/hci-lab-4/</guid>
+				<description>&lt;h2 id=&#34;introduction-and-objectives&#34;&gt;&#xD;&#xA;  Introduction and Objectives&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction-and-objectives&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;In this lab, I explored how &lt;strong&gt;3D Gaussian Splatting (3DGS)&lt;/strong&gt; can be displayed and inspected in Unity. The objectives are to import a genuine pretrained Gaussian model, convert it into a &lt;code&gt;GaussianSplatAsset&lt;/code&gt;, bind it to a &lt;code&gt;GaussianSplatRenderer&lt;/code&gt;, and examine the scene from different viewpoints. I followed the Unity workflow introduced in Mohamed ABDUL GAFOOR&amp;rsquo;s &lt;em&gt;3D Gaussian splatting in unity&lt;/em&gt; lecture slides.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

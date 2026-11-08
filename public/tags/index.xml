@@ -10,21 +10,42 @@
 		
 		
 		
-			<lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0100</lastBuildDate>
+			<lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0100</lastBuildDate>
 		
 			<atom:link href="https://starstartlliu-design.github.io/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Android</title>
-				<link>https://starstartlliu-design.github.io/myblog/tags/android/</link>
-				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
-				<guid>https://starstartlliu-design.github.io/myblog/tags/android/</guid>
+				<title>3DGS</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/3dgs/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/3dgs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gaussian Splatting</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/gaussian-splatting/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/gaussian-splatting/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>HCI</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/hci/</link>
-				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/hci/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Unity</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/unity/</link>
+				<pubDate>Mon, 09 Nov 2026 00:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/unity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Android</title>
+				<link>https://starstartlliu-design.github.io/myblog/tags/android/</link>
+				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
+				<guid>https://starstartlliu-design.github.io/myblog/tags/android/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -35,23 +56,16 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Unity</title>
-				<link>https://starstartlliu-design.github.io/myblog/tags/unity/</link>
-				<pubDate>Sun, 08 Nov 2026 12:00:00 +0100</pubDate>
-				<guid>https://starstartlliu-design.github.io/myblog/tags/unity/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Latency</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/latency/</link>
-				<pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 08 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/latency/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>LLM</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/llm/</link>
-				<pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 08 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/llm/</guid>
 				<description></description>
 			</item>
@@ -72,14 +86,14 @@
 			<item>
 				<title>Augmented Reality</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/augmented-reality/</link>
-				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/augmented-reality/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Mixed Reality</title>
 				<link>https://starstartlliu-design.github.io/myblog/tags/mixed-reality/</link>
-				<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 01 Nov 2026 00:00:00 +0100</pubDate>
 				<guid>https://starstartlliu-design.github.io/myblog/tags/mixed-reality/</guid>
 				<description></description>
 			</item>

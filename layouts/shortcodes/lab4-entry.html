@@ -1,0 +1,5 @@
+{{ with site.GetPage "/posts/hci-lab-4" }}
+{{ if or (not .Draft) (eq hugo.Environment "lab4preview") }}
+<ul><li><a href="{{ .RelPermalink }}">HCI Lab 4 — 3D Gaussian Splatting in Unity</a>: Licensed Gaussian data, Unity asset conversion, Direct3D 12 rendering, and interactive viewpoints.</li></ul>
+{{ end }}
+{{ end }}
