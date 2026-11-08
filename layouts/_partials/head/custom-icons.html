@@ -1,0 +1,8 @@
+{{/* Emit configured icons only when their static resource exists. Theme defaults are absent in this site. */}}
+{{ range $icon := slice (dict "key" "faviconSVG" "type" "image/svg+xml" "rel" "icon") (dict "key" "favicon_32" "type" "image/png" "rel" "icon") (dict "key" "favicon_16" "type" "image/png" "rel" "icon") (dict "key" "touchicon" "type" "image/png" "rel" "apple-touch-icon") (dict "key" "manifest" "rel" "manifest") (dict "key" "mask_icon" "rel" "mask-icon") }}
+  {{ with index site.Params .key }}
+    {{ if fileExists (printf "static/%s" (strings.TrimPrefix "/" .)) }}
+<link rel="{{ $icon.rel }}" href="{{ strings.TrimPrefix "/" . | relURL }}">
+    {{ end }}
+  {{ end }}
+{{ end }}

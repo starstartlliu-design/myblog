@@ -12,7 +12,7 @@ description = "Lu's course blog"
 info = ["M2 VAR Student at Télécom SudParis"]
 colorScheme = "auto"
 hideColorSchemeToggle = false
-customCSS = ["css/homework.css"]
+customCSS = ["css/homework.css", "css/hci-lab3.css"]
 
 [[menu.main]]
 name = "Posts"
